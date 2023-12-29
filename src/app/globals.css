@@ -64,3 +64,10 @@ ul li {
   left: 2.25em;
   top: 2.25em;
 }
+
+.icons {
+  font-size: 20px;
+  background: inherit;
+  pad: 5px;
+  cursor: pointer;
+}
