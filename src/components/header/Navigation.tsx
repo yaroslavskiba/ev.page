@@ -76,11 +76,11 @@ function Navigation() {
                   <Link
                     className={
                       path === pathname
-                        ? `${styles.navigationItem} ${styles.activeNavItem}`
-                        : styles.navigationItem
+                        ? `${styles.navigationItem} ${styles.active}`
+                        : `${styles.navigationItem}`
                     }
                     href={path}
-                    onClick={toggleMenu}
+                    onClick={() => toggleMenu}
                   >
                     {name}
                   </Link>

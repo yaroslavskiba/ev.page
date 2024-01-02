@@ -56,7 +56,6 @@ ul li {
   list-style: none;
 }
 
-/* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
   width: 2em;
