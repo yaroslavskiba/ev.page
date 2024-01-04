@@ -1,10 +1,8 @@
-'use client';
-
 import Link from 'next/link';
-import styles from './header.styles.module.css';
-import { usePathname } from 'next/navigation';
-import { useState } from 'react';
 import { PiTiktokLogo, PiInstagramLogo } from 'react-icons/pi';
+import BurgerButton from './BurgerButton';
+import LinkComponent from './LinkComponent';
+import styles from './header.styles.module.css';
 
 type NavType = {
   name: string;
@@ -20,41 +18,11 @@ const nav: NavType[] = [
 ];
 
 function Navigation() {
-  const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  let isOpen = false;
 
   return (
     <>
-      <div className={styles.mobileMenu} onClick={toggleMenu}>
-        <span
-          className={styles.bar}
-          style={{
-            transform: `${isOpen ? 'rotate(45deg)' : 'rotate(0)'}`,
-            top: `${isOpen ? '15px' : '5px'}`,
-            transition: '1s ease',
-          }}
-        ></span>
-        <span
-          className={styles.bar}
-          style={{
-            width: `${isOpen ? '0' : '35px'}`,
-            top: '15px',
-            transition: '1s ease',
-          }}
-        ></span>
-        <span
-          className={styles.bar}
-          style={{
-            transform: `${isOpen ? 'rotate(-45deg)' : 'rotate(0)'}`,
-            top: `${isOpen ? '15px' : '25px'}`,
-            transition: '1s ease',
-          }}
-        ></span>
-      </div>
+      <BurgerButton isOpen={isOpen} />
       <div
         className={`${styles.navigation} ${
           isOpen ? styles.openMenu : styles.hideMenu
@@ -73,23 +41,13 @@ function Navigation() {
             {nav.map(({ name, path }: NavType, index) => {
               return (
                 <li key={index}>
-                  <Link
-                    className={
-                      path === pathname
-                        ? `${styles.navigationItem} ${styles.active}`
-                        : `${styles.navigationItem}`
-                    }
-                    href={path}
-                    onClick={() => toggleMenu}
-                  >
-                    {name}
-                  </Link>
+                  <LinkComponent name={name} path={path} isOpen={isOpen} />
                 </li>
               );
             })}
           </ul>
         </nav>
-        <div className={styles.social}>
+        {/* <div className={styles.social}>
           <button
             onClick={() => window.open('https://www.instagram.com/ev.cath/')}
             className='icons'
@@ -104,7 +62,8 @@ function Navigation() {
           >
             <PiTiktokLogo />
           </button>
-        </div>
+        </div> */}
+        //TODO сделать клиентским
         <div className={styles.bottomInfo}>
           <p>Екатерина Евсеенко</p>
           <p>Made by Yaroslavskiba</p>
