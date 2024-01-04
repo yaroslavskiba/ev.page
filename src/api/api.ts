@@ -14,12 +14,12 @@ export type Painting = {
   url: string;
 };
 
-interface GalleryInterface {
-  getPaintings: () => Promise<Painting[]>;
+interface PaintingInterface {
+  getPaintings?: () => Promise<Painting[]>;
   getPainting?: (paintingId: string) => Promise<Painting | null>;
 }
 
-class Gallery implements GalleryInterface {
+class Paintings implements PaintingInterface {
   getPaintings = async (): Promise<Painting[]> => {
     const paintingsRef = collection(db, 'paintings');
     const snapshot: QuerySnapshot<DocumentData> = await getDocs(paintingsRef);
@@ -46,4 +46,4 @@ class Gallery implements GalleryInterface {
   };
 }
 
-export const gallery = new Gallery();
+export const paintings = new Paintings();

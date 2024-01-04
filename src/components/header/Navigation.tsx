@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { PiTiktokLogo, PiInstagramLogo } from 'react-icons/pi';
 import BurgerButton from './BurgerButton';
 import LinkComponent from './LinkComponent';
 import styles from './header.styles.module.css';
+import SocialButtons from './SocialButtons';
 
 type NavType = {
   name: string;
@@ -47,23 +47,7 @@ function Navigation() {
             })}
           </ul>
         </nav>
-        {/* <div className={styles.social}>
-          <button
-            onClick={() => window.open('https://www.instagram.com/ev.cath/')}
-            className='icons'
-            aria-label='Instagram'
-          >
-            <PiInstagramLogo />
-          </button>
-          <button
-            onClick={() => window.open('https://www.tiktok.com/@ev.cath')}
-            className='icons'
-            aria-label='TikTok'
-          >
-            <PiTiktokLogo />
-          </button>
-        </div> */}
-        //TODO сделать клиентским
+        <SocialButtons />
         <div className={styles.bottomInfo}>
           <p>Екатерина Евсеенко</p>
           <p>Made by Yaroslavskiba</p>

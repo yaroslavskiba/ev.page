@@ -70,3 +70,7 @@ ul li {
   pad: 5px;
   cursor: pointer;
 }
+
+.container {
+  padding: 3%;
+}
