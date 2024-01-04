@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import './globals.css';
-import Navigation from '@/components/header/Navigation';
+import SSNavigation from '@/components/header/Navigation';
 import { initializeApp } from 'firebase/app';
 import 'dotenv/config';
 import { getFirestore } from 'firebase/firestore';
@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang='ru'>
       <body className={mont.className}>
-        <Navigation />
+        <SSNavigation />
         {children}
       </body>
     </html>
