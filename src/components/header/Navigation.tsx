@@ -1,8 +1,11 @@
+'use client';
+
 import Link from 'next/link';
 import BurgerButton from './BurgerButton';
 import LinkComponent from './LinkComponent';
 import styles from './header.styles.module.css';
 import SocialButtons from './SocialButtons';
+import { useState } from 'react';
 
 type NavType = {
   name: string;
@@ -18,11 +21,13 @@ const nav: NavType[] = [
 ];
 
 function Navigation() {
-  let isOpen = false;
-
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <>
-      <BurgerButton isOpen={isOpen} />
+      <BurgerButton isOpen={isOpen} toggleMenu={toggleMenu} />
       <div
         className={`${styles.navigation} ${
           isOpen ? styles.openMenu : styles.hideMenu
@@ -41,7 +46,12 @@ function Navigation() {
             {nav.map(({ name, path }: NavType, index) => {
               return (
                 <li key={index}>
-                  <LinkComponent name={name} path={path} isOpen={isOpen} />
+                  <LinkComponent
+                    name={name}
+                    path={path}
+                    isOpen={isOpen}
+                    toggleMenu={toggleMenu}
+                  />
                 </li>
               );
             })}

@@ -2,17 +2,22 @@
 
 import Link from 'next/link';
 import styles from './header.styles.module.css';
-import toggleMenu from './toggleMenu';
-import { pathName } from '../pathName';
+import { usePathname } from 'next/navigation';
 
 interface LinkComponentPropsInterface {
   name: string;
   path: string;
   isOpen: boolean;
+  toggleMenu: () => void;
 }
 
-function LinkComponent({ name, path, isOpen }: LinkComponentPropsInterface) {
-  const pathname = pathName();
+function LinkComponent({
+  name,
+  path,
+  isOpen,
+  toggleMenu,
+}: LinkComponentPropsInterface) {
+  const pathname = usePathname();
 
   return (
     <>
@@ -23,7 +28,7 @@ function LinkComponent({ name, path, isOpen }: LinkComponentPropsInterface) {
             : `${styles.navigationItem}`
         }
         href={path}
-        onClick={() => toggleMenu(isOpen)}
+        onClick={() => toggleMenu()}
       >
         {name}
       </Link>
