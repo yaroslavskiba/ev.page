@@ -25,6 +25,7 @@ function Navigation() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
   return (
     <>
       <BurgerButton isOpen={isOpen} toggleMenu={toggleMenu} />

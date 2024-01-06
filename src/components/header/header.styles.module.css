@@ -1,13 +1,14 @@
 .navigation {
   padding: 3%;
   width: 300px;
-  min-width: 300px;
+  min-width: 270px;
   height: 100vh;
   display: flex;
   overflow: hidden;
   flex-direction: column;
   gap: 50px;
-  overflow-x: hidden;
+  position: fixed;
+  background-color: #fff;
 }
 
 .mobileMenu {
@@ -109,20 +110,18 @@
   .mobileMenu {
     z-index: 1000;
     width: 45px;
-    height: 45px;
+    height: 41px;
     cursor: pointer;
     display: block;
     position: fixed;
-    top: 25px;
-    left: 25px;
+    top: 35px;
+    left: 35px;
     background-color: inherit;
-    background-color: #fff;
+    border: 2px solid #696969;
   }
 
   .bar {
     position: absolute;
-    top: 0px;
-    left: 5px;
     height: 3px;
     width: 35px;
     background-color: #696969;

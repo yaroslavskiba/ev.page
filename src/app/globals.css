@@ -67,10 +67,17 @@ ul li {
 .icons {
   font-size: 20px;
   background: inherit;
-  pad: 5px;
+  padding: 5px;
   cursor: pointer;
 }
 
 .container {
-  padding: 3%;
+  padding: 3% 3% 3% 330px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 3%;
+  }
 }

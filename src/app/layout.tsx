@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import './globals.css';
-import Navigation from '@/components/header/Navigation';
 import { initializeApp } from 'firebase/app';
 import 'dotenv/config';
 import { getFirestore } from 'firebase/firestore';
+import Header from '@/components/header/Header';
 
 const mont = Montserrat({ subsets: ['latin'] });
 
@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang='ru'>
       <body className={mont.className}>
-        <Navigation />
+        <Header />
         {children}
       </body>
     </html>

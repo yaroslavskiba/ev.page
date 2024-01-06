@@ -1,0 +1,9 @@
+.imageBox {
+  max-width: 820px;
+  aspect-ratio: 1/1; /* Устанавливаем соотношение сторон 1:1 */
+  position: relative;
+}
+
+.painting {
+  object-fit: contain;
+}

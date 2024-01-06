@@ -15,15 +15,17 @@ function BurgerButton({ isOpen, toggleMenu }: BurgerButtonPropsInterface) {
           className={styles.bar}
           style={{
             transform: `${isOpen ? 'rotate(45deg)' : 'rotate(0)'}`,
-            top: `${isOpen ? '20px' : '10px'}`,
+            top: `${isOpen ? '17px' : '7px'}`,
+            left: `${isOpen ? '3px' : '3px'}`,
             transition: '1s ease',
           }}
         ></span>
         <span
           className={styles.bar}
           style={{
-            width: `${isOpen ? '0' : '35px'}`,
-            top: '20px',
+            width: `${isOpen ? '10px' : '35px'}`,
+            top: '17px',
+            left: `${isOpen ? '3px' : '3px'}`,
             transition: '1s ease',
           }}
         ></span>
@@ -31,7 +33,8 @@ function BurgerButton({ isOpen, toggleMenu }: BurgerButtonPropsInterface) {
           className={styles.bar}
           style={{
             transform: `${isOpen ? 'rotate(-45deg)' : 'rotate(0)'}`,
-            top: `${isOpen ? '20px' : '30px'}`,
+            top: `${isOpen ? '17px' : '27px'}`,
+            left: `${isOpen ? '3px' : '3px'}`,
             transition: '1s ease',
           }}
         ></span>
