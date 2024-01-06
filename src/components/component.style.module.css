@@ -1,7 +1,9 @@
 .imageBox {
+  /* margin: 0 auto; */
   max-width: 820px;
-  aspect-ratio: 1/1; /* Устанавливаем соотношение сторон 1:1 */
+  aspect-ratio: 1/1;
   position: relative;
+  /* margin-bottom: 25px; */
 }
 
 .painting {

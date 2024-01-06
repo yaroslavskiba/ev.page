@@ -1,10 +1,9 @@
 .navigation {
-  padding: 3%;
-  width: 300px;
+  padding: 45px;
+  width: 270px;
   min-width: 270px;
   height: 100vh;
   display: flex;
-  overflow: hidden;
   flex-direction: column;
   gap: 50px;
   position: fixed;

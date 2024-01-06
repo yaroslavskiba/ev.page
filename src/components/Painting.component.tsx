@@ -8,7 +8,7 @@ import styles from './component.style.module.css';
 function PaintingComponent({ url, name, cost }: Painting) {
   return (
     <>
-      <motion.div
+      <motion.section
         className={styles.imageBox}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -16,7 +16,7 @@ function PaintingComponent({ url, name, cost }: Painting) {
         key={name}
       >
         <Image className={styles.painting} src={url} fill alt={name} />
-      </motion.div>
+      </motion.section>
     </>
   );
 }

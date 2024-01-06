@@ -27,7 +27,7 @@ function Navigation() {
   };
 
   return (
-    <>
+    <header>
       <BurgerButton isOpen={isOpen} toggleMenu={toggleMenu} />
       <div
         className={`${styles.navigation} ${
@@ -64,7 +64,7 @@ function Navigation() {
           <p>Made by Yaroslavskiba</p>
         </div>
       </div>
-    </>
+    </header>
   );
 }
 
