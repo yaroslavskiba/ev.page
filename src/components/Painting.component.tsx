@@ -15,7 +15,27 @@ function PaintingComponent({ url, name, cost }: Painting) {
         transition={{ duration: 0.5 }}
         key={name}
       >
-        <Image className={styles.painting} src={url} fill alt={name} />
+        <div className={styles.painting}>
+          <Image
+            className={styles.imageSize}
+            src={url}
+            width={820}
+            height={820}
+            alt={name}
+          />
+        </div>
+        <div className={styles.description}>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid.
+          </p>
+          <br />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Doloremque, doloribus!
+          </p>
+          <br />
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
       </motion.section>
     </>
   );
