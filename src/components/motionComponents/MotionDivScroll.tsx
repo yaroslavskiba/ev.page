@@ -17,8 +17,8 @@ function MDivScroll({ children, name = '' }: MotionSectionScrollProps) {
       initial='hidden'
       whileInView='visible'
       variants={variantDiv}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.2 }}
+      viewport={{ once: true }}
       key={name}
     >
       {children}
