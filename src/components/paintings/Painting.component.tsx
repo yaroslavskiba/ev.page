@@ -1,12 +1,12 @@
 import { Painting } from '@/api/api';
 import Image from 'next/image';
 import styles from './component.style.module.css';
-import MotionDivScroll from '../motionComponents/MotionDivScroll';
+import MDivScroll from '../motionComponents/MotionDivScroll';
 
 function PaintingComponent({ url, name, cost }: Painting) {
   return (
     <section style={{ display: 'contents' }}>
-      <MotionDivScroll name={name}>
+      <MDivScroll name={name}>
         <div className={styles.painting}>
           <Image
             className={styles.imageSize}
@@ -28,7 +28,7 @@ function PaintingComponent({ url, name, cost }: Painting) {
           <br />
           <p>Lorem ipsum dolor sit amet.</p>
         </div>
-      </MotionDivScroll>
+      </MDivScroll>
     </section>
   );
 }

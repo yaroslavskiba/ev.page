@@ -4,7 +4,7 @@ import './globals.css';
 import { initializeApp } from 'firebase/app';
 import 'dotenv/config';
 import { getFirestore } from 'firebase/firestore';
-import Header from '@/components/header/Header';
+import Navigation from '@/components/header/Navigation';
 
 const mont = Montserrat({ subsets: ['latin'] });
 
@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang='ru'>
       <body className={mont.className}>
-        <Header />
+        <Navigation />
         {children}
       </body>
     </html>
