@@ -7,18 +7,18 @@ import { variantDiv } from './variants';
 
 interface MotionSectionScrollProps {
   children: ReactNode;
-  name?: string;
+  name: string;
 }
 
-function MDivScroll({ children, name = '' }: MotionSectionScrollProps) {
+function MDivScroll({ children, name }: MotionSectionScrollProps) {
   return (
     <motion.div
       className={styles.imageBox}
       initial='hidden'
       whileInView='visible'
       variants={variantDiv}
-      transition={{ duration: 0.2 }}
-      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true, amount: 0.1 }}
       key={name}
     >
       {children}

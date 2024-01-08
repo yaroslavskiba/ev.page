@@ -4,14 +4,20 @@ import {
   getDocs,
   DocumentData,
   QuerySnapshot,
-  doc,
-  getDoc,
 } from 'firebase/firestore';
+import nodemailer from 'nodemailer';
+import 'dotenv/config';
 
 export type Painting = {
   name: string;
   cost: string;
   url: string;
+};
+
+type SendMailType = {
+  name: string;
+  email: string;
+  question: string;
 };
 
 interface PaintingInterface {
@@ -33,16 +39,29 @@ class Paintings implements PaintingInterface {
     return paintings;
   };
 
-  getPainting = async (paintingId: string): Promise<Painting | null> => {
-    const paintingRef = doc(db, 'paintings', paintingId);
-    const snapshot = await getDoc(paintingRef);
+  sendMail = async ({ name, email, question }: SendMailType) => {
+    try {
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: `${process.env.EMAIL_TO_SEND}`,
+          pass: `${process.env.MAILER_PASSWORD}`,
+        },
+      });
 
-    if (snapshot.exists()) {
-      const { name, cost, url } = snapshot.data() as Painting;
-      return { name, cost, url };
+      let mailOptions = {
+        from: `${process.env.EMAIL_TO_SEND}`,
+        to: `${process.env.EMAIL_TO_GET}`,
+        subject: `Вопрос с сайта от ${name} почта ${email}`,
+        text: `Имя пользователя: ${name}
+Почта: ${email}
+Вопрос: ${question}`,
+      };
+
+      await transporter.sendMail(mailOptions);
+    } catch (error) {
+      console.log(error);
     }
-
-    return null;
   };
 }
 

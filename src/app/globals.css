@@ -1,12 +1,13 @@
 html,
 body {
   width: 100%;
-  /* height: 100%; */
   color: #696969;
 }
 
 input,
 textarea {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   outline: none;
 }
 
@@ -93,7 +94,6 @@ ul li {
   padding: 45px 45px 45px 300px;
   width: 100%;
   height: 100%;
-  max-height: 100%;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -104,23 +104,85 @@ ul li {
   gap: 15px;
 }
 .split {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
   max-width: 560px;
   width: 100%;
 }
 
-@media (max-width: 1024px) {
+.form {
+  margin-top: 25px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: 25px;
+}
+.form-input {
+  font-size: Tektur;
+  width: 70%;
+  height: 25px;
+  padding: 25px;
+  font-size: 14px;
+  border: 1px solid #696969;
+}
+.form-textarea {
+  resize: none;
+  max-width: 80%;
+  height: 150px;
+  padding: 25px;
+  font-size: 14px;
+  border: 1px solid #696969;
+}
+
+.link-button {
+  position: relative;
+  width: min-content;
+  cursor: pointer;
+  padding: 5px 15px 5px 0;
+  background: inherit;
+  color: #696969;
+  letter-spacing: 2px;
+}
+.link-button:before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: -5px;
+  background-color: #696969;
+  transition: width 0.3s ease;
+}
+.link-button:hover:before {
+  width: calc(100% + 5px);
+}
+.link-button:not(:hover):before {
+  right: 0;
+  width: 0;
+}
+
+@media (max-width: 1240px) {
   .info-block {
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 55px;
   }
 }
 
 @media (max-width: 768px) {
+  body {
+    padding: 0 15px;
+  }
+
   .gallery-container {
     padding: 3%;
   }
 
   .container {
     padding: 85px 3% 3% 3%;
+  }
+
+  .split {
+    align-items: center;
   }
 }

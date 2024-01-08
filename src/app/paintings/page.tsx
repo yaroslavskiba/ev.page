@@ -5,13 +5,16 @@ async function PaintingsComponent() {
   const data = await paintings.getPaintings();
 
   return (
-    <div className='gallery-container'>
-      {data.map(({ name, cost, url }) => {
-        return (
-          <PaintingComponent key={name} name={name} cost={cost} url={url} />
-        );
-      })}
-    </div>
+    <>
+      <div className='gallery-container'>
+        <div className='line'></div>
+        {data.map(({ name, cost, url }) => {
+          return (
+            <PaintingComponent key={name} name={name} cost={cost} url={url} />
+          );
+        })}
+      </div>
+    </>
   );
 }
 

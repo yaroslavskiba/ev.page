@@ -2,14 +2,14 @@
   display: flex;
   justify-content: center;
   max-width: 100%;
-  max-height: 820px;
+  max-height: 768px;
   aspect-ratio: 1/1;
   position: relative;
 }
 
 .painting {
   object-fit: cover;
-  max-width: 820px;
+  max-width: 768px;
   width: auto;
   height: auto;
   position: relative;
@@ -43,7 +43,7 @@
 .description {
   display: none;
   position: absolute;
-  width: 90%;
+  width: 80%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
