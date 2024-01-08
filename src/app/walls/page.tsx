@@ -1,5 +1,5 @@
 function Walls() {
-  return <>Walls</>;
+  return <div className='container'>Walls</div>;
 }
 
 export default Walls;

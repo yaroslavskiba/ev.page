@@ -1,20 +1,12 @@
-'use client';
-
 import { Painting } from '@/api/api';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import styles from './component.style.module.css';
+import MotionDivScroll from '../motionComponents/MotionDivScroll';
 
 function PaintingComponent({ url, name, cost }: Painting) {
   return (
-    <>
-      <motion.section
-        className={styles.imageBox}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        key={name}
-      >
+    <section style={{ display: 'contents' }}>
+      <MotionDivScroll name={name}>
         <div className={styles.painting}>
           <Image
             className={styles.imageSize}
@@ -36,8 +28,8 @@ function PaintingComponent({ url, name, cost }: Painting) {
           <br />
           <p>Lorem ipsum dolor sit amet.</p>
         </div>
-      </motion.section>
-    </>
+      </MotionDivScroll>
+    </section>
   );
 }
 

@@ -1,5 +1,5 @@
 import { paintings } from '@/api/api';
-import PaintingComponent from '@/components/Painting.component';
+import PaintingComponent from '@/components/paintings/Painting.component';
 
 async function PaintingsComponent() {
   const data = await paintings.getPaintings();
