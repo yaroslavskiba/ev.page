@@ -32,7 +32,7 @@ function MParagraph({ children, custom }: ChildrenType) {
       custom={custom}
       variants={variantContent}
       initial='hidden'
-      whileInView='visible'
+      animate='visible'
       viewport={{ once: true }}
     >
       {children}
