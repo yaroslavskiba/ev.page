@@ -23,6 +23,8 @@ function LinkComponent({
   const route = useRouter();
 
   const handleLink = (path: string) => {
+    if (pathname === path) return;
+
     toggleMenu();
     setTimeout(() => {
       route.push(path);

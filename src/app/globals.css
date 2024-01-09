@@ -162,6 +162,7 @@ ul li {
   background: inherit;
   color: #696969;
   letter-spacing: 2px;
+  cursor: pointer;
 }
 .link-button:before {
   content: '';

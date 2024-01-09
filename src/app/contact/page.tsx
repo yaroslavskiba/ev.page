@@ -16,10 +16,8 @@ function Contact() {
         <div className='split'>
           <MHeader custom={2}>Связаться со мной</MHeader>
           <MParagraph custom={3}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-            facilis quisquam dolores molestiae! Delectus perspiciatis rem amet
-            quaerat! Est accusantium repellendus eveniet, nesciunt error
-            doloribus?
+            Для связи со мной вы можете использовать эту форму, либо телеграм
+            бота. Я постараюсь ответить в ближайшее время!
           </MParagraph>
           <ContactForm />
         </div>
