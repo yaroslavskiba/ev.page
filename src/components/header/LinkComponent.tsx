@@ -27,9 +27,8 @@ function LinkComponent({
             : `${styles.navigationItem}`
         }
         href={path}
-        as={path}
+        prefetch={false}
         onClick={() => toggleMenu()}
-        replace
       >
         {name}
       </Link>
