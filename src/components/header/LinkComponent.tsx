@@ -28,6 +28,7 @@ function LinkComponent({
         }
         href={path}
         onClick={() => toggleMenu()}
+        replace
       >
         {name}
       </Link>
