@@ -22,7 +22,9 @@ const nav: NavType[] = [
 function Navigation() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setTimeout(() => {
+      setIsOpen(!isOpen);
+    }, 1000);
   };
 
   return (
