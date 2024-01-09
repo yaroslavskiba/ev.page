@@ -30,7 +30,7 @@ function LinkComponent({
         shallow={true}
         onClick={() => toggleMenu()}
       >
-        <a>{name}</a>
+        {name}
       </Link>
     </>
   );
