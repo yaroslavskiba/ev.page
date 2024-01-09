@@ -37,6 +37,10 @@
 .navigationItem {
   position: relative;
   padding: 5px 5px 0 0;
+  color: #696969;
+  background-color: inherit;
+  font-size: 14px;
+  font-family: Tektur;
 }
 .navigationItem:before {
   content: '';

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import styles from './header.styles.module.css';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 interface LinkComponentPropsInterface {
   name: string;
@@ -17,21 +17,27 @@ function LinkComponent({
   toggleMenu,
 }: LinkComponentPropsInterface) {
   const pathname = usePathname();
+  const route = useRouter();
+
+  const handleLink = (path: string) => {
+    toggleMenu();
+    setTimeout(() => {
+      route.push(path);
+    }, 500);
+  };
 
   return (
     <>
-      <Link
+      <button
         className={
           path === pathname
             ? `${styles.navigationItem} ${styles.active}`
             : `${styles.navigationItem}`
         }
-        href={path}
-        shallow={true}
-        onClick={() => toggleMenu()}
+        onClick={() => handleLink(path)}
       >
         {name}
-      </Link>
+      </button>
     </>
   );
 }
