@@ -8,11 +8,11 @@ import {
 function About() {
   return (
     <div className='container'>
-      <aside className='info-block'>
+      <section className='info-block'>
         <MDivImage custom={1}>
           <CustomImage url='/staticImages/main1.jpeg' alt='main image' />
         </MDivImage>
-        <section className='split'>
+        <div className='split'>
           <MHeader custom={2}>Екатерина Евсеенко</MHeader>
           <MParagraph custom={2}>
             Привет! Меня зовут <b>Екатерина Евсеенко</b>, и я художница и
@@ -40,9 +40,9 @@ function About() {
             Я всегда открыта для новых проектов и с нетерпением жду возможности
             поделиться своим искусством с вами.
           </MParagraph>
-        </section>
-      </aside>
-      <div className='line'></div>
+        </div>
+      </section>
+      {/* <div className='line'></div> */}
     </div>
   );
 }
