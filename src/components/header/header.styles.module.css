@@ -44,11 +44,15 @@
   height: 2px;
   width: 0;
   bottom: -5px;
-  background-color: #696969;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(105, 105, 105, 1) 100%
+  );
   transition: width 0.3s ease;
 }
 .navigationItem:hover:before {
-  width: calc(100% + 5px);
+  width: 100%;
 }
 .navigationItem:not(:hover):before {
   right: 0;
@@ -58,10 +62,14 @@
   content: '';
   position: absolute;
   height: 2px;
-  width: calc(100% + 5px);
+  width: 100%;
   bottom: -5px;
   left: 0;
-  background-color: #696969;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(105, 105, 105, 1) 100%
+  );
 }
 
 .menuWidth {

@@ -1,44 +1,27 @@
-import CustomImage from '@/components/custom/contentStaticImage.tsx/Image.component';
-import {
-  MDivImage,
-  MHeader,
-  MParagraph,
-} from '@/components/motionComponents/MotionGroupElement';
+import { paintings } from '@/api/api';
+import PaintingComponent from '@/components/paintings/Painting.component';
 
-export default function Home() {
+async function PaintingsComponent() {
+  const data = await paintings.getPaintings();
+
   return (
-    <div className='container'>
-      <section className='info-block'>
-        <MDivImage custom={1}>
-          <CustomImage url='/staticImages/main1.jpeg' alt='main image' />
-        </MDivImage>
-        <div className='split'>
-          <MHeader custom={2}>
-            <b>Lorem ipsum dolor sit amet.</b>
-          </MHeader>
-          <MParagraph custom={3}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Consequatur voluptate eos consequuntur quaerat.
-          </MParagraph>
-          <MParagraph custom={4}>
-            Quasi dolore dolorem harum iusto? Assumenda culpa esse deserunt
-            sunt, fugit necessitatibus in molestias perspiciatis reiciendis
-            eveniet quam eaque voluptas accusantium molestiae! Repellendus
-            deserunt explicabo, nihil atque nemo dolores dolor?
-          </MParagraph>
-          <MParagraph custom={5}>
-            Vel quaerat, consequatur debitis reprehenderit similique dolorum,
-            sapiente quia iure laudantium et aliquid, accusamus ex cupiditate
-            sequi temporibus eaque est maiores vero nemo. Cum nihil optio sint
-            doloribus quod a sequi delectus.
-          </MParagraph>
-          <MParagraph custom={6}>
-            Numquam velit aspernatur quibusdam veniam, a quas distinctio
-            expedita, doloremque repellendus blanditiis earum dolorum tenetur,
-            natus soluta quis ad. Molestias a cumque nam fugiat expedita.
-          </MParagraph>
-        </div>
-      </section>
-    </div>
+    <>
+      <div className='gallery-container'>
+        {data.map(({ name, description, cost, url, id }) => {
+          return (
+            <PaintingComponent
+              key={name}
+              name={name}
+              description={description}
+              cost={cost}
+              url={url}
+              id={id}
+            />
+          );
+        })}
+      </div>
+    </>
   );
 }
+
+export default PaintingsComponent;

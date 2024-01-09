@@ -22,7 +22,7 @@ type DataType = {
 
 const data: DataType[] = [
   { name: 'Полное имя', id: 'name', custom: '4' },
-  { name: 'Электронная почта', id: 'email', custom: '5' },
+  { name: 'Номер телефона', id: 'email', custom: '5' },
 ];
 
 const textAreaData: DataType = { name: 'Вопрос', id: 'question', custom: '6' };

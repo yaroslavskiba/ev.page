@@ -14,7 +14,6 @@ interface LinkComponentPropsInterface {
 function LinkComponent({
   name,
   path,
-  isOpen,
   toggleMenu,
 }: LinkComponentPropsInterface) {
   const pathname = usePathname();

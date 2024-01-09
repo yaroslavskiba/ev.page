@@ -13,8 +13,7 @@ type NavType = {
 };
 
 const nav: NavType[] = [
-  { name: 'Главная', path: '/' },
-  { name: 'Картины', path: '/paintings' },
+  { name: 'Картины', path: '/' },
   { name: 'Стены', path: '/walls' },
   { name: 'Обо мне', path: '/about' },
   { name: 'Контакты', path: '/contact' },
@@ -35,12 +34,19 @@ function Navigation() {
         }`}
       >
         <div className={styles.logoGroup}>
-          <Link href='/' className={styles.logoTitle}>
-            <b>Ev Cath</b>
+          <Link href='/' className={styles.logoTitle} onClick={toggleMenu}>
+            Ev Cath
           </Link>
-          <p className={styles.logoDescription}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          </p>
+          <div>
+            <p className={styles.logoDescription}>
+              г. Минск, Республика Беларусь
+            </p>
+            <br />
+            <p className={styles.logoDescription}>Для связи:</p>
+            <a className={styles.logoDescription} href=''>
+              Telegram
+            </a>
+          </div>
         </div>
         <nav>
           <ul className={styles.navigationList}>
