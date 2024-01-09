@@ -3,6 +3,9 @@
 import Link from 'next/link';
 import styles from './header.styles.module.css';
 import { usePathname, useRouter } from 'next/navigation';
+import { Tektur } from 'next/font/google';
+
+const tektur = Tektur({ subsets: ['latin'] });
 
 interface LinkComponentPropsInterface {
   name: string;
@@ -36,7 +39,7 @@ function LinkComponent({
         }
         onClick={() => handleLink(path)}
       >
-        {name}
+        <span className={tektur.className}>{name}</span>
       </button>
     </>
   );
