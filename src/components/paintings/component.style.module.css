@@ -2,17 +2,18 @@
   display: flex;
   justify-content: center;
   max-width: 100%;
-  max-height: 768px;
+  max-height: 720px;
   aspect-ratio: 1/1;
   position: relative;
 }
 
 .painting {
   object-fit: cover;
-  max-width: 768px;
+  max-width: 720px;
   width: auto;
   height: auto;
   position: relative;
+  border: 1px solid #696969;
 }
 
 .imageSize {
@@ -42,9 +43,10 @@
 
 .description {
   display: none;
+  font-size: 14px;
   position: absolute;
-  width: 80%;
-  top: 50%;
+  width: 70%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -52,7 +54,9 @@
   text-align: center;
   pointer-events: none;
 }
-
+.description + h2 {
+  font-size: 14px;
+}
 .description:hover {
   display: block;
 }

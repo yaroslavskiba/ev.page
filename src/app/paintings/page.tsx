@@ -7,10 +7,16 @@ async function PaintingsComponent() {
   return (
     <>
       <div className='gallery-container'>
-        <div className='line'></div>
-        {data.map(({ name, cost, url }) => {
+        {data.map(({ name, description, cost, url, id }) => {
           return (
-            <PaintingComponent key={name} name={name} cost={cost} url={url} />
+            <PaintingComponent
+              key={name}
+              name={name}
+              description={description}
+              cost={cost}
+              url={url}
+              id={id}
+            />
           );
         })}
       </div>

@@ -3,34 +3,31 @@ import Image from 'next/image';
 import styles from './component.style.module.css';
 import MDivScroll from '../motionComponents/MotionDivScroll';
 
-function PaintingComponent({ url, name, cost }: Painting) {
+function PaintingComponent({ url, description, id, name, cost }: Painting) {
   return (
     <>
-      <section style={{ display: 'contents' }}>
+      <article style={{ display: 'contents' }}>
         <MDivScroll name={name}>
           <div className={styles.painting}>
             <Image
               className={styles.imageSize}
               src={url}
-              width={768}
-              height={768}
+              width={720}
+              height={720}
               alt={name}
             />
           </div>
-          <div className={styles.description}>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid.
-            </p>
+          <section className={styles.description}>
+            <h2>{name}</h2>
+            <br />
+            <p>{description}</p>
             <br />
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Doloremque, doloribus!
+              <i>${cost}</i>
             </p>
-            <br />
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
+          </section>
         </MDivScroll>
-      </section>
+      </article>
     </>
   );
 }

@@ -27,7 +27,7 @@ function Navigation() {
   };
 
   return (
-    <header>
+    <>
       <BurgerButton isOpen={isOpen} toggleMenu={toggleMenu} />
       <div
         className={`${styles.navigation} ${
@@ -36,7 +36,7 @@ function Navigation() {
       >
         <div className={styles.logoGroup}>
           <Link href='/' className={styles.logoTitle}>
-            Ev Cath
+            <b>Ev Cath</b>
           </Link>
           <p className={styles.logoDescription}>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -64,7 +64,7 @@ function Navigation() {
           <p>Made by Yaroslavskiba</p>
         </div>
       </div>
-    </header>
+    </>
   );
 }
 
