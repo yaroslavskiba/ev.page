@@ -6,10 +6,10 @@ import Navigation from '@/components/header/Navigation';
 const tektur = Tektur({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Ev.Cath - Artist and Wall Decorator',
+  title: 'ev.cath - Artist and Wall Decorator',
   description:
-    'Впустите в свою жизнь искусство выдающегося художника и мастера декора стен Ev.Cath. Откройте для себя впечатляющие работы и уникальные дизайны, которые преобразят ваше пространство и добавят ему неповторимости.',
-  keywords: ['Ev.Cath', 'художник', 'декоратор стен', 'искусство', 'картина'],
+    'Впустите в свою жизнь искусство выдающегося художника и мастера декора стен ev.cath. Откройте для себя впечатляющие работы и уникальные дизайны, которые преобразят ваше пространство и добавят ему неповторимости.',
+  keywords: ['ev.cath', 'художник', 'декоратор стен', 'искусство', 'картина'],
   robots: 'index,follow',
 };
 

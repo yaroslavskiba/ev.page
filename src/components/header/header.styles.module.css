@@ -110,11 +110,11 @@
 
   .hideMenu {
     transform: translate(-100%, 0);
-    transition: all 1s ease;
+    transition: all 0.5s ease;
   }
   .openMenu {
     transform: translate(0, 0);
-    transition: all 1s ease;
+    transition: all 0.5s ease;
     overflow: scroll;
   }
 
