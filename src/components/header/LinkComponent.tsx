@@ -27,7 +27,7 @@ function LinkComponent({
             : `${styles.navigationItem}`
         }
         href={path}
-        prefetch={false}
+        shallow={true}
         onClick={() => toggleMenu()}
       >
         {name}
