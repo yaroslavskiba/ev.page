@@ -5,7 +5,7 @@ import BurgerButton from './BurgerButton';
 import LinkComponent from './LinkComponent';
 import styles from './header.styles.module.css';
 import SocialButtons from './SocialButtons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type NavType = {
   name: string;
@@ -24,6 +24,14 @@ function Navigation() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [isOpen]);
 
   return (
     <>
