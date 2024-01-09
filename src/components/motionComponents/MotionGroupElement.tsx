@@ -47,7 +47,7 @@ function MDiv({ children, custom }: ChildrenType) {
         custom={custom}
         variants={variantContent}
         initial='hidden'
-        whileInView='visible'
+        animate='visible'
         className='split'
         viewport={{ once: true }}
       >
@@ -64,7 +64,7 @@ function MDivImage({ children, custom }: ChildrenType) {
         custom={custom}
         variants={variantContentTop}
         initial='hidden'
-        whileInView='visible'
+        animate='visible'
         className='split'
         viewport={{ once: true }}
       >
@@ -81,7 +81,7 @@ function MHeader({ children, custom }: ChildrenType) {
         custom={custom}
         variants={variantContent}
         initial='hidden'
-        whileInView='visible'
+        animate='visible'
         className='split'
         viewport={{ once: true }}
       >
@@ -107,7 +107,7 @@ function MInput({ fc, value, custom, placeholder, id }: InputType) {
         custom={custom}
         variants={variantContent}
         initial='hidden'
-        whileInView='visible'
+        animate='visible'
         viewport={{ once: true }}
         value={value}
         placeholder={placeholder}
@@ -134,7 +134,7 @@ function MTextArea({ fc, value, custom, placeholder, id }: InputType) {
         custom={custom}
         variants={variantContent}
         initial='hidden'
-        whileInView='visible'
+        animate='visible'
         viewport={{ once: true }}
         value={value}
         placeholder={placeholder}
@@ -152,7 +152,7 @@ function MButton({ nameButton }: ButtonType) {
         custom={7}
         variants={variantContentBottom}
         initial='hidden'
-        whileInView='visible'
+        animate='visible'
         viewport={{ once: true }}
         className='link-button'
         type='submit'
