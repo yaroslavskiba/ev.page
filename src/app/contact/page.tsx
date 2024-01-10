@@ -5,6 +5,7 @@ import {
   MHeader,
   MParagraph,
 } from '@/components/motionComponents/MotionGroupElement';
+import SocialPersonalButtons from '@/components/custom/customComponents/SocialPersonal';
 
 function Contact() {
   return (
@@ -16,9 +17,17 @@ function Contact() {
         <div className='split'>
           <MHeader custom={2}>Связаться со мной</MHeader>
           <MParagraph custom={3}>
-            Для связи со мной вы можете использовать эту форму, либо телеграм
-            бота. Я постараюсь ответить в ближайшее время!
+            Для связи со мной вы можете использовать эту форму, либо{' '}
+            <a
+              className='text-link'
+              href='https://t.me/Ev_Cath_helper_bot'
+              target='blank'
+            >
+              телеграм бота
+            </a>
+            . Я постараюсь ответить в ближайшее время!
           </MParagraph>
+          <SocialPersonalButtons />
           <ContactForm />
         </div>
       </section>

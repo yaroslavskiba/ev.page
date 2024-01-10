@@ -21,11 +21,11 @@ type DataType = {
 };
 
 const data: DataType[] = [
-  { name: 'Полное имя', id: 'name', custom: '4' },
-  { name: 'Номер телефона', id: 'email', custom: '5' },
+  { name: 'Полное имя', id: 'name', custom: '5' },
+  { name: 'Номер телефона', id: 'email', custom: '6' },
 ];
 
-const textAreaData: DataType = { name: 'Вопрос', id: 'question', custom: '6' };
+const textAreaData: DataType = { name: 'Вопрос', id: 'question', custom: '7' };
 
 function ContactForm() {
   const [contactData, setContactData] = useState<ContactData>({

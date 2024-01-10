@@ -60,6 +60,25 @@ ul li {
   overflow: hidden;
 }
 
+.text-link {
+  font-size: 14px;
+  text-decoration: underline;
+}
+.text-link-image {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  padding: 5px 0;
+  color: #fff;
+}
+.text-link-image:hover {
+  color: #fff;
+}
+
+.highpxsize {
+  font-size: 16px;
+}
+
 /* .line {
   position: relative;
   right: -50px;
@@ -213,5 +232,9 @@ ul li {
     max-width: 320px;
     min-width: 300px;
     width: 100%;
+  }
+
+  .info-block {
+    margin: 0 auto;
   }
 }

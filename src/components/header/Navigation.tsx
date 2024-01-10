@@ -49,11 +49,6 @@ function Navigation() {
             <p className={styles.logoDescription}>
               г. Минск, Республика Беларусь
             </p>
-            <br />
-            <p className={styles.logoDescription}>Для связи:</p>
-            <a className={styles.logoDescription} href=''>
-              Telegram
-            </a>
           </div>
         </div>
         <nav>

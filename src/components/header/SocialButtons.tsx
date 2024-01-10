@@ -8,14 +8,14 @@ function SocialButtons() {
     <>
       <div className={styles.social}>
         <button
-          onClick={() => window.open('https://www.instagram.com/ev.cath/')}
+          onClick={() => window.open('https://www.instagram.com/ev.cath_art/')}
           className='icons'
           aria-label='Instagram'
         >
           <PiInstagramLogo />
         </button>
         <button
-          onClick={() => window.open('https://www.tiktok.com/@ev.cath')}
+          onClick={() => window.open('https://www.tiktok.com/@evcath')}
           className='icons'
           aria-label='TikTok'
         >
