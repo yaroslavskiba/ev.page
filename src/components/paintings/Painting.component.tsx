@@ -16,28 +16,28 @@ function PaintingComponent({ url, description, id, name, cost }: Painting) {
               height={720}
               alt={name}
             />
+            <div className={styles.description}>
+              <p>
+                Номер картины: <b>{id}</b>
+              </p>
+              <br />
+              <h2>{name}</h2>
+              <br />
+              <p>{description}</p>
+              <br />
+              <p>
+                <i>${cost}</i>
+              </p>
+              <br />
+              <a
+                className={styles.textLinkImage}
+                href='https://t.me/Ev_Cath_helper_bot'
+                target='blank'
+              >
+                <i>Задать вопрос или Заказать</i>
+              </a>
+            </div>
           </section>
-          <div className={styles.description}>
-            <p>
-              Номер картины: <b>{id}</b>
-            </p>
-            <br />
-            <h2>{name}</h2>
-            <br />
-            <p>{description}</p>
-            <br />
-            <p>
-              <i>${cost}</i>
-            </p>
-            <br />
-            <a
-              className={styles.textLinkImage}
-              href='https://t.me/Ev_Cath_helper_bot'
-              target='blank'
-            >
-              <i>Задать вопрос или приобрести</i>
-            </a>
-          </div>
         </MDivScroll>
       </article>
     </>
