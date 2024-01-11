@@ -35,7 +35,7 @@ function WallComponent({ url, id, type, cost }: Walls) {
                   href='https://t.me/Ev_Cath_helper_bot'
                   target='blank'
                 >
-                  <i>Вопросы & оформление</i>
+                  <i>Задать вопрос & Оформить</i>
                 </a>
               </div>
             </section>

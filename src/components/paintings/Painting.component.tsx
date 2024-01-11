@@ -37,7 +37,7 @@ function PaintingComponent({ url, description, id, name, cost }: Painting) {
                   href='https://t.me/Ev_Cath_helper_bot'
                   target='blank'
                 >
-                  <i>Вопросы & оформление</i>
+                  <i>Задать вопрос & Оформить</i>
                 </a>
               </div>
             </section>

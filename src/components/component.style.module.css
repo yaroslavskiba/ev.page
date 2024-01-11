@@ -42,13 +42,15 @@
   position: relative;
   z-index: 2;
   cursor: pointer;
-  padding: 5px 0;
   color: #fff;
   pointer-events: all;
+  padding: 10px 15px;
+  border: 1px solid #696969;
+  top: 10px;
 }
 .textLinkImage:hover {
   color: #fff;
-  text-decoration: underline;
+  border-color: #fff;
 }
 
 .description {
@@ -56,7 +58,7 @@
   font-size: 14px;
   position: absolute;
   width: 70%;
-  top: 75%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;

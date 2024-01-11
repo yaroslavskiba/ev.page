@@ -35,6 +35,7 @@ function MParagraph({ children, custom }: ChildrenType) {
       initial='hidden'
       animate='visible'
       viewport={{ once: true }}
+      className='center-p'
     >
       {children}
     </motion.p>
