@@ -1,15 +1,14 @@
 import { paintings } from '@/api/api';
 import WallComponent from '@/components/walls/Wall.component';
-import { Suspense, cache } from 'react';
+import { cache } from 'react';
 import { MotionMainHeader } from '@/components/motionComponents/MotionGroupElement';
-import Loading from '../loading';
 
 const getItem = cache(async () => {
   const item = await paintings.getWalls();
   return item;
 });
 
-async function Component() {
+async function WallsComponent() {
   const data = await getItem();
 
   return (
@@ -29,14 +28,6 @@ async function Component() {
         })}
       </div>
     </>
-  );
-}
-
-function WallsComponent() {
-  return (
-    <Suspense fallback={<Loading />}>
-      <Component />
-    </Suspense>
   );
 }
 
