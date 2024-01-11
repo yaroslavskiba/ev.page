@@ -6,6 +6,7 @@ import {
   variantContent,
   variantContentBottom,
   variantContentTop,
+  variantDiv,
 } from './variants';
 import { ContactData } from '../custom/contactForm/ContactForm';
 
@@ -82,7 +83,7 @@ function MHeader({ children, custom }: ChildrenType) {
         variants={variantContent}
         initial='hidden'
         animate='visible'
-        className='split'
+        className='split main-route-header'
         viewport={{ once: true }}
       >
         {children}
@@ -163,4 +164,30 @@ function MButton({ nameButton }: ButtonType) {
   );
 }
 
-export { MParagraph, MDiv, MDivImage, MHeader, MInput, MTextArea, MButton };
+function MotionMainHeader({ children }: { children: ReactNode }) {
+  return (
+    <>
+      <motion.h1
+        variants={variantDiv}
+        initial='hidden'
+        animate='visible'
+        className='main-route-header'
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        {children}
+      </motion.h1>
+    </>
+  );
+}
+
+export {
+  MParagraph,
+  MDiv,
+  MDivImage,
+  MHeader,
+  MInput,
+  MTextArea,
+  MButton,
+  MotionMainHeader,
+};

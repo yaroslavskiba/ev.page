@@ -2,6 +2,7 @@ import { Walls } from '@/api/api';
 import Image from 'next/image';
 import styles from '../component.style.module.css';
 import MDivScroll from '../motionComponents/MotionDivScroll';
+import Loading from '@/app/loading';
 
 function WallComponent({ url, id, type, cost }: Walls) {
   return (

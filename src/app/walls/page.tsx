@@ -1,6 +1,7 @@
 import { paintings } from '@/api/api';
 import WallComponent from '@/components/walls/Wall.component';
 import { cache } from 'react';
+import { MotionMainHeader } from '@/components/motionComponents/MotionGroupElement';
 
 const getItem = cache(async () => {
   const item = await paintings.getWalls();
@@ -13,7 +14,7 @@ async function WallsComponent() {
   return (
     <>
       <div className='container'>
-        <h1>&#0;</h1>
+        <MotionMainHeader>Декор стен</MotionMainHeader>
         {data.map(({ type, cost, url, id }) => {
           return (
             <WallComponent
