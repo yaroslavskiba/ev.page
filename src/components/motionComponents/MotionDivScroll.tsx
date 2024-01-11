@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
-import styles from '../paintings/component.style.module.css';
+import styles from '../component.style.module.css';
 import { variantDiv } from './variants';
 
 interface MotionSectionScrollProps {

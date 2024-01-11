@@ -1,12 +1,19 @@
 import { paintings } from '@/api/api';
 import PaintingComponent from '@/components/paintings/Painting.component';
+import { cache } from 'react';
+
+const getItem = cache(async () => {
+  const item = await paintings.getPaintings();
+  return item;
+});
 
 async function PaintingsComponent() {
-  const data = await paintings.getPaintings();
+  const data = await getItem();
 
   return (
     <>
-      <div className='gallery-container'>
+      <div className='container'>
+        <h1>&#0;</h1>
         {data.map(({ name, description, cost, url, id }) => {
           return (
             <PaintingComponent

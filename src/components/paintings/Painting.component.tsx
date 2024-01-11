@@ -1,6 +1,6 @@
 import { Painting } from '@/api/api';
 import Image from 'next/image';
-import styles from './component.style.module.css';
+import styles from '../component.style.module.css';
 import MDivScroll from '../motionComponents/MotionDivScroll';
 
 function PaintingComponent({ url, description, id, name, cost }: Painting) {
@@ -8,7 +8,7 @@ function PaintingComponent({ url, description, id, name, cost }: Painting) {
     <>
       <article style={{ display: 'contents' }}>
         <MDivScroll name={name}>
-          <div className={styles.painting}>
+          <section className={styles.painting}>
             <Image
               className={styles.imageSize}
               src={url}
@@ -16,28 +16,28 @@ function PaintingComponent({ url, description, id, name, cost }: Painting) {
               height={720}
               alt={name}
             />
-          </div>
-          <section className={styles.description}>
-            <p className={styles.descriptionParagraph}>
+          </section>
+          <div className={styles.description}>
+            <p>
               Номер картины: <b>{id}</b>
             </p>
             <br />
-            <h2 className={styles.descriptionParagraph}>{name}</h2>
+            <h2>{name}</h2>
             <br />
-            <p className={styles.descriptionParagraph}>{description}</p>
+            <p>{description}</p>
             <br />
-            <p className={styles.descriptionParagraph}>
+            <p>
               <i>${cost}</i>
             </p>
             <br />
             <a
-              className='text-link-image'
+              className={styles.textLinkImage}
               href='https://t.me/Ev_Cath_helper_bot'
               target='blank'
             >
               <i>Задать вопрос или приобрести</i>
             </a>
-          </section>
+          </div>
         </MDivScroll>
       </article>
     </>
