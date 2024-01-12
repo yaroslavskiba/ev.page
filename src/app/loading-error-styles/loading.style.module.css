@@ -17,6 +17,7 @@
   position: relative;
   animation: pulse 1s linear infinite;
 }
+
 .loader:after {
   content: '';
   position: absolute;
@@ -41,6 +42,7 @@
     transform: translate(-50%, -50%) scale(1);
   }
 }
+
 @keyframes pulse {
   0%,
   60%,
@@ -49,5 +51,11 @@
   }
   80% {
     transform: scale(1.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
   }
 }
