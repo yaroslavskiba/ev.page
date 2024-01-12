@@ -14,7 +14,6 @@ function LinkComponent({ name, path, pathname }: LinkComponentPropsInterface) {
   return (
     <>
       <Link
-        replace
         href={path}
         className={
           path === pathname
