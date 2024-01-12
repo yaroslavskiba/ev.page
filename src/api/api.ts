@@ -3,6 +3,8 @@ import {
   getDocs,
   DocumentData,
   QuerySnapshot,
+  getDoc,
+  doc,
 } from 'firebase/firestore';
 import 'dotenv/config';
 import { db } from '@/app/initialize';
@@ -31,7 +33,9 @@ type SendMailType = {
 
 interface UnionInterface {
   getPaintings?: () => Promise<Painting[]>;
+  getPainting?: (id: string) => Promise<Painting | undefined>;
   getWalls?: () => Promise<Walls[]>;
+  getWall?: (id: string) => Promise<Walls | undefined>;
 }
 
 class Paintings implements UnionInterface {
@@ -47,6 +51,18 @@ class Paintings implements UnionInterface {
     return paintings;
   };
 
+  getPainting = async (id: string): Promise<Painting | undefined> => {
+    const paintingRef = doc(db, 'paintings', id);
+    const snapshot = await getDoc(paintingRef);
+
+    if (snapshot.exists()) {
+      const { name, description, cost, url } = snapshot.data();
+      return { id, name, description, cost, url };
+    } else {
+      return undefined;
+    }
+  };
+
   getWalls = async (): Promise<Walls[]> => {
     const paintingsRef = collection(db, 'walls');
     const snapshot: QuerySnapshot<DocumentData> = await getDocs(paintingsRef);
@@ -57,6 +73,18 @@ class Paintings implements UnionInterface {
       walls.push({ type, cost, url, id });
     });
     return walls;
+  };
+
+  getWall = async (id: string): Promise<Walls | undefined> => {
+    const wallRef = doc(db, 'walls', id);
+    const snapshot = await getDoc(wallRef);
+
+    if (snapshot.exists()) {
+      const { type, cost, url } = snapshot.data();
+      return { id, type, cost, url };
+    } else {
+      return undefined;
+    }
   };
 
   sendMail = async ({ name, email, question }: SendMailType) => {

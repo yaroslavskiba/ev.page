@@ -4,6 +4,7 @@ import styles from '../component.style.module.css';
 import MDivScroll from '../motionComponents/MotionDivScroll';
 import { Suspense } from 'react';
 import Loading from '@/app/loading';
+import Link from 'next/link';
 
 function WallComponent({ url, id, type, cost }: Walls) {
   return (
@@ -15,8 +16,8 @@ function WallComponent({ url, id, type, cost }: Walls) {
               <Image
                 className={styles.imageSize}
                 src={url}
-                width={720}
-                height={720}
+                width={680}
+                height={680}
                 alt={type}
                 priority={true}
               />
@@ -33,13 +34,9 @@ function WallComponent({ url, id, type, cost }: Walls) {
                 <i>${cost}</i>
               </p>
               <br />
-              <a
-                className={styles.textLinkImage}
-                href='https://t.me/Ev_Cath_helper_bot'
-                target='blank'
-              >
-                <i>Задать вопрос & Оформить</i>
-              </a>
+              <Link href={`/walls/${id}`} className={styles.textLinkImage}>
+                <i>Подробнее</i>
+              </Link>
             </div>
           </section>
         </MDivScroll>
