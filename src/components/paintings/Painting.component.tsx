@@ -1,5 +1,3 @@
-'use client';
-
 import { Painting } from '@/api/api';
 import Image from 'next/image';
 import styles from '../component.style.module.css';
