@@ -77,7 +77,6 @@
 @media (max-width: 768px) {
   .description {
     font-size: 12px;
-    top: 70%;
   }
 
   .description + h2 {

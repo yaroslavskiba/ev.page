@@ -1,3 +1,5 @@
+'use client';
+
 import { Painting } from '@/api/api';
 import Image from 'next/image';
 import styles from '../component.style.module.css';
@@ -19,7 +21,6 @@ function PaintingComponent({ url, description, id, name, cost }: Painting) {
                 width={680}
                 height={680}
                 alt={name}
-                priority={true}
               />
             </Suspense>
             <div className={styles.description}>

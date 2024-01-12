@@ -1,3 +1,5 @@
+'use client';
+
 import { Walls } from '@/api/api';
 import Image from 'next/image';
 import styles from '../component.style.module.css';
@@ -19,7 +21,7 @@ function WallComponent({ url, id, type, cost }: Walls) {
                 width={680}
                 height={680}
                 alt={type}
-                priority={true}
+                priority
               />
             </Suspense>
 
