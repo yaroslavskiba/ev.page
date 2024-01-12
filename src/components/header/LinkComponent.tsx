@@ -20,20 +20,20 @@ function LinkComponent({
   toggleMenu,
 }: LinkComponentPropsInterface) {
   const pathname = usePathname();
-  const route = useRouter();
+  // const route = useRouter();
 
   const handleLink = (path: string) => {
     if (pathname === path) return;
 
     toggleMenu();
-    setTimeout(() => {
-      route.replace(path);
-    }, 500);
+    // setTimeout(() => {
+    //   route.replace(path);
+    // }, 500);
   };
 
   return (
     <>
-      <button
+      {/* <button
         className={
           path === pathname
             ? `${styles.navigationItem} ${styles.active}`
@@ -42,7 +42,19 @@ function LinkComponent({
         onClick={() => handleLink(path)}
       >
         <span className={tektur.className}>{name}</span>
-      </button>
+      </button> */}
+      <Link
+        replace
+        href={path}
+        className={
+          path === pathname
+            ? `${styles.navigationItem} ${styles.active}`
+            : `${styles.navigationItem}`
+        }
+        onClick={() => handleLink(path)}
+      >
+        <span className={tektur.className}>{name}</span>
+      </Link>
     </>
   );
 }
