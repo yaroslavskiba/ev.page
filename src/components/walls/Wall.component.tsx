@@ -2,6 +2,8 @@ import { Walls } from '@/api/api';
 import Image from 'next/image';
 import styles from '../component.style.module.css';
 import MDivScroll from '../motionComponents/MotionDivScroll';
+import { Suspense } from 'react';
+import Loading from '@/app/loading';
 
 function WallComponent({ url, id, type, cost }: Walls) {
   return (
@@ -9,13 +11,17 @@ function WallComponent({ url, id, type, cost }: Walls) {
       <article style={{ display: 'contents' }}>
         <MDivScroll name={type}>
           <section className={styles.painting}>
-            <Image
-              className={styles.imageSize}
-              src={url}
-              width={720}
-              height={720}
-              alt={type}
-            />
+            <Suspense fallback={<Loading />}>
+              <Image
+                className={styles.imageSize}
+                src={url}
+                width={720}
+                height={720}
+                alt={type}
+                priority={true}
+              />
+            </Suspense>
+
             <div className={styles.description}>
               <p>
                 Номер картины: <b>{id}</b>

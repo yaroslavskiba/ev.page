@@ -2,6 +2,8 @@ import { Painting } from '@/api/api';
 import Image from 'next/image';
 import styles from '../component.style.module.css';
 import MDivScroll from '../motionComponents/MotionDivScroll';
+import { Suspense } from 'react';
+import Loading from '@/app/loading';
 
 function PaintingComponent({ url, description, id, name, cost }: Painting) {
   return (
@@ -9,13 +11,16 @@ function PaintingComponent({ url, description, id, name, cost }: Painting) {
       <article style={{ display: 'contents' }}>
         <MDivScroll name={name}>
           <section className={styles.painting}>
-            <Image
-              className={styles.imageSize}
-              src={url}
-              width={720}
-              height={720}
-              alt={name}
-            />
+            <Suspense fallback={<Loading />}>
+              <Image
+                className={styles.imageSize}
+                src={url}
+                width={720}
+                height={720}
+                alt={name}
+                priority={true}
+              />
+            </Suspense>
             <div className={styles.description}>
               <p>
                 Номер картины: <b>{id}</b>

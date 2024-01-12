@@ -20,7 +20,6 @@ export const metadata: Metadata = {
   },
   authors: [{ name: 'yaroslavskiba' }],
   generator: 'Художник',
-  viewport: 'width=device-width, initial-scale=1',
   creator: 'yaroslavskiba',
 };
 

@@ -27,7 +27,7 @@ function LinkComponent({
 
     toggleMenu();
     setTimeout(() => {
-      route.push(path);
+      route.replace(path);
     }, 500);
   };
 
