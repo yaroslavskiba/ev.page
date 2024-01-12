@@ -9,7 +9,7 @@ const getItem = cache(async () => {
   return item;
 });
 
-async function PaintingsComponent() {
+async function Page() {
   const data = await getItem();
 
   return (
@@ -33,4 +33,4 @@ async function PaintingsComponent() {
   );
 }
 
-export default PaintingsComponent;
+export default Page;

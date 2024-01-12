@@ -7,7 +7,7 @@ import {
 } from '@/components/motionComponents/MotionGroupElement';
 import SocialPersonalButtons from '@/components/custom/customComponents/SocialPersonal';
 
-function Contact() {
+function Page() {
   return (
     <div className='container'>
       <section className='info-block'>
@@ -35,4 +35,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default Page;

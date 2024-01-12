@@ -6,7 +6,6 @@ import LinkComponent from './LinkComponent';
 import styles from './header.styles.module.css';
 import SocialButtons from './SocialButtons';
 import { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
 
 type NavType = {
   name: string;
@@ -22,8 +21,6 @@ const nav: NavType[] = [
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const pathname = usePathname();
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -35,11 +32,6 @@ function Navigation() {
       document.body.classList.remove('no-scroll');
     }
   }, [isOpen]);
-
-  const handleLink = (path: string) => {
-    if (path === pathname) return;
-    toggleMenu();
-  };
 
   return (
     <>
@@ -63,8 +55,13 @@ function Navigation() {
           <ul className={styles.navigationList}>
             {nav.map(({ name, path }: NavType, index) => {
               return (
-                <li key={index} onClick={() => handleLink(path)}>
-                  <LinkComponent name={name} path={path} pathname={pathname} />
+                <li key={index}>
+                  <LinkComponent
+                    name={name}
+                    path={path}
+                    isOpen={isOpen}
+                    toggleMenu={toggleMenu}
+                  />
                 </li>
               );
             })}

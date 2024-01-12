@@ -5,7 +5,7 @@ import {
   MParagraph,
 } from '@/components/motionComponents/MotionGroupElement';
 
-function About() {
+function Page() {
   return (
     <div className='container'>
       <section className='info-block'>
@@ -46,4 +46,4 @@ function About() {
   );
 }
 
-export default About;
+export default Page;

@@ -8,7 +8,7 @@ const getItem = cache(async () => {
   return item;
 });
 
-async function WallsComponent() {
+async function Page() {
   const data = await getItem();
 
   return (
@@ -31,4 +31,4 @@ async function WallsComponent() {
   );
 }
 
-export default WallsComponent;
+export default Page;
