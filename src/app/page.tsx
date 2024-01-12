@@ -14,23 +14,21 @@ async function PaintingsComponent() {
 
   return (
     <>
-      <main style={{ display: 'contents' }}>
-        <div className='container'>
-          <MotionMainHeader>Картины</MotionMainHeader>
-          {data.map(({ name, description, cost, url, id }) => {
-            return (
-              <PaintingComponent
-                key={name}
-                name={name}
-                description={description}
-                cost={cost}
-                url={url}
-                id={id}
-              />
-            );
-          })}
-        </div>
-      </main>
+      <div className='container'>
+        <MotionMainHeader>Картины</MotionMainHeader>
+        {data.map(({ name, description, cost, url, id }) => {
+          return (
+            <PaintingComponent
+              key={name}
+              name={name}
+              description={description}
+              cost={cost}
+              url={url}
+              id={id}
+            />
+          );
+        })}
+      </div>
     </>
   );
 }

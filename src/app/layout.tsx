@@ -10,7 +10,18 @@ export const metadata: Metadata = {
   description:
     'Впустите в свою жизнь искусство выдающегося художника и мастера декора стен ev.cath. Откройте для себя впечатляющие работы и уникальные дизайны, которые преобразят ваше пространство и добавят ему неповторимости.',
   keywords: ['ev.cath', 'художник', 'декоратор стен', 'искусство', 'картина'],
-  robots: 'index,follow',
+  robots: {
+    index: true,
+    follow: true,
+    noarchive: true,
+    nosnippet: true,
+    noimageindex: true,
+    nocache: true,
+  },
+  authors: [{ name: 'yaroslavskiba' }],
+  generator: 'Художник',
+  viewport: 'width=device-width, initial-scale=1',
+  creator: 'yaroslavskiba',
 };
 
 export default function RootLayout({
@@ -25,7 +36,7 @@ export default function RootLayout({
         <header>
           <Navigation />
         </header>
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );
