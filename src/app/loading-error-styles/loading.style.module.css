@@ -27,7 +27,7 @@
   border-radius: 50%;
   display: inline-block;
   box-sizing: border-box;
-  left: 50%;
+  left: 0;
   top: 50%;
   transform: translate(-50%, -50%);
   animation: scaleUp 1s linear infinite;
@@ -56,6 +56,6 @@
 
 @media (max-width: 768px) {
   .loader {
-    left: -75%;
+    left: -90%;
   }
 }
