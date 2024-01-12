@@ -14,7 +14,7 @@
   border-radius: 50%;
   display: inline-block;
   position: relative;
-  left: -1%;
+  left: -3%;
   animation: pulse 1s linear infinite;
 }
 
