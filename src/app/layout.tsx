@@ -32,9 +32,7 @@ export default function RootLayout({
     <html lang='ru'>
       <link rel='icon' href='/icon.ico' />
       <body className={tektur.className}>
-        <header>
-          <Navigation />
-        </header>
+        <Navigation />
         <main>{children}</main>
       </body>
     </html>

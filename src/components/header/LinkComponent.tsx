@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import styles from './header.styles.module.css';
 import { usePathname, useRouter } from 'next/navigation';
 import { Tektur } from 'next/font/google';

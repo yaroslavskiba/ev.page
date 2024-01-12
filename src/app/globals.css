@@ -37,11 +37,6 @@ a:hover {
   text-decoration: none;
 }
 
-a:hover {
-  color: #373737;
-  transition: 0.7s ease;
-}
-
 footer,
 header,
 aside {
