@@ -1,4 +1,4 @@
-import styles from '../loading-error-styles/loading.style.module.css';
+import styles from '../../loading-error-styles/loading.style.module.css';
 
 function Loading() {
   return (
