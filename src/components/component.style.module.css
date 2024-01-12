@@ -45,14 +45,8 @@
   cursor: pointer;
   color: #fff;
   pointer-events: all;
-  padding: 10px 15px;
-  border: 1px solid #696969;
+  border: 1px solid #fff;
   top: 10px;
-}
-.textLinkImage:hover {
-  color: #fff;
-  border-color: #fff;
-  padding: 10px 15px;
 }
 
 .description {

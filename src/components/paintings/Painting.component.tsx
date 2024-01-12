@@ -34,7 +34,11 @@ function PaintingComponent({ url, description, id, name, cost }: Painting) {
                 <i>${cost}</i>
               </p>
               <br />
-              <Link href={`/${id}`} className={styles.textLinkImage}>
+              <Link
+                href={`/${id}`}
+                className={styles.textLinkImage}
+                style={{ padding: '10px 15px' }}
+              >
                 <i>Подробнее</i>
               </Link>
             </div>
