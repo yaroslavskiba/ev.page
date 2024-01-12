@@ -25,7 +25,7 @@ export default function RootLayout({
         <header>
           <Navigation />
         </header>
-        <main>{children}</main>
+        {children}
       </body>
     </html>
   );
