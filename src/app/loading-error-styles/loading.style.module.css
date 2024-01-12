@@ -14,7 +14,7 @@
   border-radius: 50%;
   display: inline-block;
   position: relative;
-  left: -5%;
+  left: 0;
   animation: pulse 1s linear infinite;
 }
 
@@ -29,7 +29,7 @@
   box-sizing: border-box;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -55%);
+  transform: translate(-50%, -50%);
   animation: scaleUp 1s linear infinite;
 }
 
@@ -51,5 +51,11 @@
   }
   80% {
     transform: scale(1.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .loader {
+    left: -15%;
   }
 }
