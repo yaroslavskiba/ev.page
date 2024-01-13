@@ -20,6 +20,8 @@ function WallComponent({ url, id, type, cost }: Walls) {
                 height={680}
                 alt={type}
                 priority
+                placeholder='blur'
+                blurDataURL='/staticImages/loader.jpeg'
               />
             </Suspense>
 

@@ -33,9 +33,9 @@ type SendMailType = {
 
 interface UnionInterface {
   getPaintings?: () => Promise<Painting[]>;
-  getPainting?: (id: string) => Promise<Painting | undefined>;
+  getPainting?: (id: string) => Promise<Painting>;
   getWalls?: () => Promise<Walls[]>;
-  getWall?: (id: string) => Promise<Walls | undefined>;
+  getWall?: (id: string) => Promise<Walls>;
 }
 
 class Paintings implements UnionInterface {
@@ -51,16 +51,15 @@ class Paintings implements UnionInterface {
     return paintings;
   };
 
-  getPainting = async (id: string): Promise<Painting | undefined> => {
+  getPainting = async (id: string): Promise<Painting> => {
     const paintingRef = doc(db, 'paintings', id);
     const snapshot = await getDoc(paintingRef);
 
-    if (snapshot.exists()) {
-      const { name, description, cost, url } = snapshot.data();
-      return { id, name, description, cost, url };
-    } else {
-      return undefined;
+    if (!snapshot.exists()) {
+      return { id: '', name: '', description: '', cost: '', url: '' };
     }
+    const { name, description, cost, url } = snapshot.data();
+    return { id, name, description, cost, url };
   };
 
   getWalls = async (): Promise<Walls[]> => {
@@ -75,16 +74,15 @@ class Paintings implements UnionInterface {
     return walls;
   };
 
-  getWall = async (id: string): Promise<Walls | undefined> => {
+  getWall = async (id: string): Promise<Walls> => {
     const wallRef = doc(db, 'walls', id);
     const snapshot = await getDoc(wallRef);
 
-    if (snapshot.exists()) {
-      const { type, cost, url } = snapshot.data();
-      return { id, type, cost, url };
-    } else {
-      return undefined;
+    if (!snapshot.exists()) {
+      return { type: '', cost: '', url: '', id: '' };
     }
+    const { type, cost, url } = snapshot.data();
+    return { id, type, cost, url };
   };
 
   sendMail = async ({ name, email, question }: SendMailType) => {

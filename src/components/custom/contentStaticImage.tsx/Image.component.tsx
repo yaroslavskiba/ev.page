@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './custom.styles.module.css';
+import Loading from '@/app/loading';
 
 type ImageType = {
   url: string;
@@ -16,6 +17,8 @@ function CustomImage({ url, alt }: ImageType) {
           width={560}
           height={560}
           alt={alt}
+          placeholder='blur'
+          blurDataURL='/staticImages/loader.jpeg'
         />
       </div>
     </div>

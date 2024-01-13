@@ -19,6 +19,9 @@ function PaintingComponent({ url, description, id, name, cost }: Painting) {
                 width={680}
                 height={680}
                 alt={name}
+                priority
+                placeholder='blur'
+                blurDataURL='/staticImages/loader.jpeg'
               />
             </Suspense>
             <div className={styles.description}>

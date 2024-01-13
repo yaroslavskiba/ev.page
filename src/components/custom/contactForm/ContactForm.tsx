@@ -57,7 +57,7 @@ function ContactForm() {
   };
 
   return (
-    <div>
+    <div style={{ display: 'contents' }}>
       <form action='submit' onSubmit={(e) => handleSubmit(e)} className='form'>
         {data.map(({ name, id, custom }: DataType) => {
           return (

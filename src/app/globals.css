@@ -124,7 +124,7 @@ ul li {
 
 .info-block {
   display: flex;
-  gap: 15px;
+  gap: 25px;
 }
 .split {
   display: flex;
@@ -149,6 +149,9 @@ ul li {
   padding: 25px;
   font-size: 14px;
   border: 1px solid #696969;
+  width: 100%;
+  max-width: 560px;
+  min-width: 300px;
 }
 .form-textarea {
   resize: none;
@@ -157,6 +160,9 @@ ul li {
   padding: 25px;
   font-size: 14px;
   border: 1px solid #696969;
+  width: 100%;
+  max-width: 560px;
+  min-width: 300px;
 }
 
 .link-button {
@@ -197,15 +203,7 @@ ul li {
   }
   .split {
     align-items: center;
-  }
-
-  .form-input {
-    width: 300px;
-  }
-  .form-textarea {
-    max-width: 320px;
-    min-width: 300px;
-    width: 100%;
+    max-width: 80%;
   }
 }
 
@@ -223,6 +221,6 @@ ul li {
   }
 
   .info-block {
-    margin: 0 auto;
+    justify-content: center;
   }
 }
