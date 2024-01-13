@@ -1,12 +1,30 @@
 import { paintings } from '@/api/api';
-import { MHeader } from '@/components/motionComponents/MotionGroupElement';
+import CustomImage from '@/components/custom/contentStaticImage.tsx/Image.component';
+import {
+  MDivImage,
+  MHeader,
+  MParagraph,
+} from '@/components/motionComponents/MotionGroupElement';
 
 export default async function Page({ params }: { params: { id: string } }) {
   const data = await paintings.getWall(params.id);
 
   return (
     <div className='container'>
-      <MHeader custom={1}>{data?.type}</MHeader>.
+      <section className='info-block'>
+        <MDivImage custom={1}>
+          <CustomImage url={data.url} alt={data.url} />
+        </MDivImage>
+        <div className='split'>
+          <MHeader custom={2}>{data.type}</MHeader>
+          <MParagraph custom={3}>
+            Номер картины: <b>{data.id}</b>
+          </MParagraph>
+          <MParagraph custom={5}>
+            Цена: $ <i>{data.cost}</i>
+          </MParagraph>
+        </div>
+      </section>
     </div>
   );
 }
