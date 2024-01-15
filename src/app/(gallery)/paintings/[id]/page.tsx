@@ -23,7 +23,7 @@ export default async function Page({ params }: { params: { id: string } }) {
           </MParagraph>
           <MParagraph custom={4}>Описание: {data.description}</MParagraph>
           <MParagraph custom={5}>
-            Цена: $ <i>{data.cost}</i>
+            Цена: <i>${data.cost}</i>
           </MParagraph>
           <SocialAddComponent start={6} />
         </div>

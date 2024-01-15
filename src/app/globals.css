@@ -29,6 +29,7 @@ a:focus {
   padding: 0;
   text-decoration: none;
   outline: none;
+  color: inherit;
 }
 
 a:visited,
@@ -232,7 +233,6 @@ ul li {
 
 @media (max-width: 1240px) {
   .center-p {
-    text-align: justify;
   }
 
   .info-block {
@@ -241,7 +241,6 @@ ul li {
   }
   .split {
     align-items: center;
-    max-width: 80%;
   }
 }
 
@@ -255,10 +254,11 @@ ul li {
   }
 
   .container {
-    padding: 85px 3% 3% 3%;
+    padding: 85px 5px 5px 5px;
   }
 
   .info-block {
     justify-content: center;
+    padding-bottom: 55px;
   }
 }
