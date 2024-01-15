@@ -6,12 +6,12 @@ function Page() {
     <>
       <div className='container'>
         <div className='info-block'>
-          <MDivNav custom={1} bg={'./staticImages/form.jpeg'}>
+          <MDivNav custom={1} bg={'./staticImages/form.webp'}>
             <Link href='/paintings' className='gallery-nav-p'>
               Картины
             </Link>
           </MDivNav>
-          <MDivNav custom={1} bg={'./staticImages/main1.jpeg'}>
+          <MDivNav custom={1} bg={'./staticImages/main1.webp'}>
             <Link href='/walls' className='gallery-nav-p'>
               Стены
             </Link>
