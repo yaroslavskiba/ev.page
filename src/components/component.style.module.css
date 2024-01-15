@@ -23,7 +23,8 @@
 .pointerClick {
   opacity: 0;
   top: 90%;
-  left: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   position: absolute;
   font-size: 26px;
   z-index: 1000000;
