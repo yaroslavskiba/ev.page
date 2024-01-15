@@ -200,6 +200,7 @@ function MLink({
         style={{
           padding: '5px 0',
           width: 'max-content',
+          color: '#696969',
         }}
         custom={custom}
         variants={variantContent}

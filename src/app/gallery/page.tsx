@@ -15,11 +15,11 @@ function Page() {
         <div className='info-block'>
           <MDivNav custom={2}>
             <Image
+              style={{ objectFit: 'cover' }}
               src='/staticImages/main1.webp'
               fill
-              sizes=''
+              sizes='100%'
               alt='Стены'
-              objectFit='cover'
             />
             <Link href='/gallery/paintings' className='gallery-nav-p'>
               Картины
@@ -27,11 +27,11 @@ function Page() {
           </MDivNav>
           <MDivNav custom={3}>
             <Image
+              style={{ objectFit: 'cover' }}
               src='/staticImages/form.webp'
               fill
-              sizes='300px'
+              sizes='100%'
               alt='Стены'
-              objectFit='cover'
             />
             <Link href='/gallery/walls' className='gallery-nav-p'>
               Стены
