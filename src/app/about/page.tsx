@@ -10,7 +10,7 @@ function Page() {
     <div className='container'>
       <section className='info-block'>
         <MDivImage custom={1}>
-          <CustomImage url='/staticImages/main1.jpeg' alt='main image' />
+          <CustomImage url='/staticImages/main1.webp' alt='main image' />
         </MDivImage>
         <div className='split'>
           <MHeader custom={2}>Екатерина Евсеенко</MHeader>

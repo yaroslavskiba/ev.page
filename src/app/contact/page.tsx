@@ -12,7 +12,7 @@ function Page() {
     <div className='container'>
       <section className='info-block'>
         <MDivImage custom={1}>
-          <CustomImage url='/staticImages/form.jpeg' alt='form image' />
+          <CustomImage url='/staticImages/form.webp' alt='form image' />
         </MDivImage>
         <div className='split'>
           <MHeader custom={2}>Связаться со мной</MHeader>

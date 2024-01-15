@@ -12,15 +12,13 @@ function CustomImage({ url, alt }: ImageType) {
   return (
     <div className={styles.imageBox}>
       <div className={styles.painting}>
-        <Suspense fallback={<Loading />}>
-          <Image
-            className={styles.imageSize}
-            src={url}
-            width={560}
-            height={560}
-            alt={alt}
-          />
-        </Suspense>
+        <Image
+          className={styles.imageSize}
+          src={url}
+          width={560}
+          height={560}
+          alt={alt}
+        />
       </div>
     </div>
   );

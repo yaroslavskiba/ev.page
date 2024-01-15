@@ -12,18 +12,13 @@ function WallComponent({ url, id, type, cost }: Walls) {
       <article style={{ display: 'contents' }}>
         <MDivScroll name={type}>
           <section className={styles.painting}>
-            <Suspense fallback={<Loading />}>
-              <Image
-                className={styles.imageSize}
-                src={url}
-                width={768}
-                height={768}
-                alt={type}
-                priority
-                placeholder='blur'
-                blurDataURL='/staticImages/loader.jpeg'
-              />
-            </Suspense>
+            <Image
+              className={styles.imageSize}
+              src={url}
+              width={768}
+              height={768}
+              alt={type}
+            />
 
             <div className={styles.description}>
               <p>
