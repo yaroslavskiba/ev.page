@@ -11,7 +11,7 @@ function Page() {
               Картины
             </Link>
           </MDivNav>
-          <MDivNav custom={2} bg={'./staticImages/main1.jpeg'}>
+          <MDivNav custom={1} bg={'./staticImages/main1.jpeg'}>
             <Link href='/walls' className='gallery-nav-p'>
               Стены
             </Link>
