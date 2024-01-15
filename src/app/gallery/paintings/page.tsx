@@ -17,7 +17,7 @@ async function Page() {
     <>
       <div className='container'>
         <MotionMainHeader>
-          <Link className='header-icon' href='/'>
+          <Link className='header-icon' href='/gallery'>
             <TbArrowBigLeftLine />
           </Link>
           Картины

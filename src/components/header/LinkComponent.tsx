@@ -34,7 +34,7 @@ function LinkComponent({
     <>
       <button
         className={
-          path === pathname
+          pathname === path
             ? `${styles.navigationItem} ${styles.active}`
             : `${styles.navigationItem}`
         }

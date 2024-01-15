@@ -1,7 +1,5 @@
 import Image from 'next/image';
 import styles from './custom.styles.module.css';
-import Loading from '@/app/loading';
-import { Suspense } from 'react';
 
 type ImageType = {
   url: string;

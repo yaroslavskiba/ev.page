@@ -3,21 +3,28 @@ import CustomImage from '@/components/custom/contentStaticImage.tsx/Image.compon
 import SocialAddComponent from '@/components/custom/socialAddComponent/SocialAddComponent';
 import {
   MDivImage,
-  MHeader,
   MParagraph,
+  MotionMainHeader,
 } from '@/components/motionComponents/MotionGroupElement';
+import Link from 'next/link';
+import { TbArrowBigLeftLine } from 'react-icons/tb';
 
 export default async function Page({ params }: { params: { id: string } }) {
   const data = await paintings.getPainting(params.id);
 
   return (
     <div className='container'>
+      <MotionMainHeader>
+        <Link className='header-icon' href='/gallery/paintings'>
+          <TbArrowBigLeftLine />
+        </Link>
+        {data.name}
+      </MotionMainHeader>
       <section className='info-block'>
         <MDivImage custom={1}>
           <CustomImage url={data.url} alt={data.name} />
         </MDivImage>
         <div className='split' style={{ alignItems: 'flex-start' }}>
-          <MHeader custom={2}>{data.name}</MHeader>
           <MParagraph custom={3}>
             Номер картины: <b>{data.id}</b>
           </MParagraph>
