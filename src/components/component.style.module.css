@@ -10,7 +10,7 @@
 
 .painting {
   object-fit: cover;
-  max-width: 820px;
+  max-width: 768px;
   width: auto;
   height: auto;
   position: relative;

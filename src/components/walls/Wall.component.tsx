@@ -2,8 +2,6 @@ import { Walls } from '@/api/api';
 import Image from 'next/image';
 import styles from '../component.style.module.css';
 import MDivScroll from '../motionComponents/MotionDivScroll';
-import { Suspense } from 'react';
-import Loading from '@/app/loading';
 import Link from 'next/link';
 
 function WallComponent({ url, id, type, cost }: Walls) {
