@@ -13,6 +13,7 @@ import { ContactData } from '../custom/contactForm/ContactForm';
 type ChildrenType = {
   children: ReactNode;
   custom: number;
+  bg?: string;
 };
 
 interface InputType {
@@ -182,6 +183,60 @@ function MotionMainHeader({ children }: { children: ReactNode }) {
   );
 }
 
+function MLink({
+  children,
+  href,
+  custom,
+}: {
+  children: ReactNode;
+  href: string;
+  custom: number;
+}) {
+  return (
+    <>
+      <motion.a
+        href={href}
+        style={{
+          padding: '5px 10px',
+          border: '1px solid #696969',
+          width: 'max-content',
+        }}
+        custom={custom}
+        variants={variantContent}
+        initial='hidden'
+        animate='visible'
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className='center-p'
+      >
+        {children}
+      </motion.a>
+    </>
+  );
+}
+
+function MDivNav({ children, custom, bg }: ChildrenType) {
+  return (
+    <>
+      <motion.div
+        custom={custom}
+        variants={variantContent}
+        initial='hidden'
+        animate='visible'
+        className='gallery-nav-item'
+        viewport={{ once: true }}
+        style={{
+          background: `url(${bg})`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+        }}
+      >
+        {children}
+      </motion.div>
+    </>
+  );
+}
+
 export {
   MParagraph,
   MDiv,
@@ -191,4 +246,6 @@ export {
   MTextArea,
   MButton,
   MotionMainHeader,
+  MLink,
+  MDivNav,
 };

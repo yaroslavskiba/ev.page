@@ -1,5 +1,6 @@
 import { paintings } from '@/api/api';
 import CustomImage from '@/components/custom/contentStaticImage.tsx/Image.component';
+import SocialAddComponent from '@/components/custom/socialAddComponent/SocialAddComponent';
 import {
   MDivImage,
   MHeader,
@@ -20,9 +21,10 @@ export default async function Page({ params }: { params: { id: string } }) {
           <MParagraph custom={3}>
             Номер картины: <b>{data.id}</b>
           </MParagraph>
-          <MParagraph custom={5}>
+          <MParagraph custom={4}>
             Цена: $ <i>{data.cost}</i>
           </MParagraph>
+          <SocialAddComponent start={5} />
         </div>
       </section>
     </div>

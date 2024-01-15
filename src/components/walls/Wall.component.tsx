@@ -16,8 +16,8 @@ function WallComponent({ url, id, type, cost }: Walls) {
               <Image
                 className={styles.imageSize}
                 src={url}
-                width={680}
-                height={680}
+                width={768}
+                height={768}
                 alt={type}
                 priority
                 placeholder='blur'

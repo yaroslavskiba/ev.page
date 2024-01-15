@@ -1,33 +1,22 @@
-import { paintings } from '@/api/api';
-import PaintingComponent from '@/components/paintings/Painting.component';
-import { cache } from 'react';
+import { MDivNav } from '@/components/motionComponents/MotionGroupElement';
+import Link from 'next/link';
 
-import { MotionMainHeader } from '@/components/motionComponents/MotionGroupElement';
-
-const getItem = cache(async () => {
-  const item = await paintings.getPaintings();
-  return item;
-});
-
-async function Page() {
-  const data = await getItem();
-
+function Page() {
   return (
     <>
       <div className='container'>
-        <MotionMainHeader>Картины</MotionMainHeader>
-        {data.map(({ name, description, cost, url, id }) => {
-          return (
-            <PaintingComponent
-              key={name}
-              name={name}
-              description={description}
-              cost={cost}
-              url={url}
-              id={id}
-            />
-          );
-        })}
+        <div className='info-block'>
+          <MDivNav custom={1} bg={'./staticImages/form.jpeg'}>
+            <Link href='/paintings' className='gallery-nav-p'>
+              Картины
+            </Link>
+          </MDivNav>
+          <MDivNav custom={2} bg={'./staticImages/main1.jpeg'}>
+            <Link href='/walls' className='gallery-nav-p'>
+              Стены
+            </Link>
+          </MDivNav>
+        </div>
       </div>
     </>
   );

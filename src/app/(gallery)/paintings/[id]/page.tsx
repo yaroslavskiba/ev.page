@@ -1,5 +1,6 @@
 import { paintings } from '@/api/api';
 import CustomImage from '@/components/custom/contentStaticImage.tsx/Image.component';
+import SocialAddComponent from '@/components/custom/socialAddComponent/SocialAddComponent';
 import {
   MDivImage,
   MHeader,
@@ -15,7 +16,7 @@ export default async function Page({ params }: { params: { id: string } }) {
         <MDivImage custom={1}>
           <CustomImage url={data.url} alt={data.name} />
         </MDivImage>
-        <div className='split'>
+        <div className='split' style={{ alignItems: 'flex-start' }}>
           <MHeader custom={2}>{data.name}</MHeader>
           <MParagraph custom={3}>
             Номер картины: <b>{data.id}</b>
@@ -24,6 +25,7 @@ export default async function Page({ params }: { params: { id: string } }) {
           <MParagraph custom={5}>
             Цена: $ <i>{data.cost}</i>
           </MParagraph>
+          <SocialAddComponent start={6} />
         </div>
       </section>
     </div>

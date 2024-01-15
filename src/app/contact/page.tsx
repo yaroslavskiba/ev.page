@@ -17,7 +17,7 @@ function Page() {
         <div className='split'>
           <MHeader custom={2}>Связаться со мной</MHeader>
           <MParagraph custom={3}>
-            Для связи со мной вы можете использовать эту форму, либо
+            Для связи со мной вы можете использовать эту форму, либо{' '}
             <a
               className='text-link'
               href='https://t.me/Ev_Cath_helper_bot'

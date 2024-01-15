@@ -19,8 +19,6 @@ function CustomImage({ url, alt }: ImageType) {
             width={560}
             height={560}
             alt={alt}
-            placeholder='blur'
-            blurDataURL='/staticImages/loader.jpeg'
           />
         </Suspense>
       </div>

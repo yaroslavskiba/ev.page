@@ -16,8 +16,8 @@ function PaintingComponent({ url, description, id, name, cost }: Painting) {
               <Image
                 className={styles.imageSize}
                 src={url}
-                width={680}
-                height={680}
+                width={768}
+                height={768}
                 alt={name}
                 priority
                 placeholder='blur'
@@ -38,7 +38,7 @@ function PaintingComponent({ url, description, id, name, cost }: Painting) {
               </p>
               <br />
               <Link
-                href={`/${id}`}
+                href={`/paintings/${id}`}
                 className={styles.textLinkImage}
                 style={{ padding: '10px 15px' }}
               >
