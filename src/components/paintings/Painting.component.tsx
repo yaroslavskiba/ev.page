@@ -1,8 +1,11 @@
+'use client';
+
 import { Painting } from '@/api/api';
 import Image from 'next/image';
 import styles from '../component.style.module.css';
 import MDivScroll from '../motionComponents/MotionDivScroll';
 import Link from 'next/link';
+import MInfinityDiv from '../motionComponents/MInfinityDiv';
 
 function PaintingComponent({ url, description, id, name, cost }: Painting) {
   return (
@@ -17,6 +20,7 @@ function PaintingComponent({ url, description, id, name, cost }: Painting) {
               height={768}
               alt={name}
             />
+            <MInfinityDiv />
             <div className={styles.description}>
               <p>
                 Номер картины: <b>{id}</b>

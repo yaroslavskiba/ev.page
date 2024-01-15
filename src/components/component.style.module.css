@@ -8,6 +8,32 @@
   margin-bottom: 55px;
 }
 
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pointerClick {
+  opacity: 0;
+  top: 90%;
+  left: 49%;
+  position: absolute;
+  font-size: 26px;
+  z-index: 1000000;
+  color: #fff;
+  width: min-content;
+  height: min-content;
+  animation: scaleUp 1s infinite;
+  transform-origin: center;
+}
+
 .painting {
   object-fit: cover;
   max-width: 768px;
@@ -31,6 +57,10 @@
 }
 .painting:hover > .description {
   display: block;
+}
+
+.painting:hover > .pointerClick {
+  opacity: 0;
 }
 
 .imageSize {
@@ -70,6 +100,10 @@
 }
 
 @media (max-width: 768px) {
+  .pointerClick {
+    opacity: 1;
+  }
+
   .description {
     font-size: 12px;
   }
