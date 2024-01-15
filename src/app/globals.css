@@ -136,6 +136,7 @@ ul li {
 }
 
 .gallery-nav-item {
+  position: relative;
   min-width: 300px;
   max-width: 420px;
   width: 100%;

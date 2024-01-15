@@ -13,7 +13,6 @@ import { ContactData } from '../custom/contactForm/ContactForm';
 type ChildrenType = {
   children: ReactNode;
   custom: number;
-  bg?: string;
   center?: boolean;
 };
 
@@ -216,7 +215,7 @@ function MLink({
   );
 }
 
-function MDivNav({ children, custom, bg }: ChildrenType) {
+function MDivNav({ children, custom }: ChildrenType) {
   return (
     <>
       <motion.div
@@ -226,11 +225,6 @@ function MDivNav({ children, custom, bg }: ChildrenType) {
         animate='visible'
         className='gallery-nav-item'
         viewport={{ once: true }}
-        style={{
-          background: `url(${bg})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-        }}
       >
         {children}
       </motion.div>
