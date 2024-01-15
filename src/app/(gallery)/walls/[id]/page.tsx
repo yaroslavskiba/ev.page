@@ -18,9 +18,6 @@ export default async function Page({ params }: { params: { id: string } }) {
         </MDivImage>
         <div className='split'>
           <MHeader custom={2}>{data.type}</MHeader>
-          <MParagraph custom={3}>
-            Номер картины: <b>{data.id}</b>
-          </MParagraph>
           <MParagraph custom={4}>
             Цена: <i>${data.cost}</i>
           </MParagraph>

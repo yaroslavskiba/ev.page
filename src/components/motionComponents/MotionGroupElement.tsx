@@ -14,6 +14,7 @@ type ChildrenType = {
   children: ReactNode;
   custom: number;
   bg?: string;
+  center?: boolean;
 };
 
 interface InputType {
@@ -77,7 +78,7 @@ function MDivImage({ children, custom }: ChildrenType) {
   );
 }
 
-function MHeader({ children, custom }: ChildrenType) {
+function MHeader({ children, custom, center }: ChildrenType) {
   return (
     <>
       <motion.h1
@@ -86,6 +87,7 @@ function MHeader({ children, custom }: ChildrenType) {
         initial='hidden'
         animate='visible'
         className='split main-route-header'
+        style={center ? { margin: '0 auto' } : {}}
         viewport={{ once: true }}
       >
         {children}
@@ -197,8 +199,7 @@ function MLink({
       <motion.a
         href={href}
         style={{
-          padding: '5px 10px',
-          border: '1px solid #696969',
+          padding: '5px 0',
           width: 'max-content',
         }}
         custom={custom}

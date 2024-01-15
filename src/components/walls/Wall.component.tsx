@@ -22,7 +22,7 @@ function WallComponent({ url, id, type, cost }: Walls) {
 
             <div className={styles.description}>
               <p>
-                Номер картины: <b>{id}</b>
+                Номер декора: <b>{id}</b>
               </p>
               <br />
               <h2>{type}</h2>

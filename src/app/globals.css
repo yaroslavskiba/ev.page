@@ -163,6 +163,7 @@ ul li {
 
 .info-block {
   display: flex;
+  justify-content: center;
   gap: 25px;
 }
 .split {
@@ -232,9 +233,6 @@ ul li {
 }
 
 @media (max-width: 1240px) {
-  .center-p {
-  }
-
   .info-block {
     flex-wrap: wrap;
     gap: 55px;
