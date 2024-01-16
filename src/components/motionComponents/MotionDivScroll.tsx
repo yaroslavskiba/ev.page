@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 import styles from '../component.style.module.css';
-import { variantDiv } from './variants';
+import { variantDivScroll } from './variants';
 
 interface MotionSectionScrollProps {
   children: ReactNode;
@@ -16,7 +16,7 @@ function MDivScroll({ children, name }: MotionSectionScrollProps) {
       className={styles.imageBox}
       initial='hidden'
       whileInView='visible'
-      variants={variantDiv}
+      variants={variantDivScroll}
       transition={{ duration: 0.5 }}
       viewport={{ once: true, amount: 0.1 }}
       key={name}

@@ -9,6 +9,9 @@ import {
   variantDiv,
 } from './variants';
 import { ContactData } from '../custom/contactForm/ContactForm';
+import { Exo_2 } from 'next/font/google';
+
+const exo = Exo_2({ subsets: ['cyrillic'] });
 
 type ChildrenType = {
   children: ReactNode;
@@ -107,7 +110,7 @@ function MInput({ fc, value, custom, placeholder, id }: InputType) {
   return (
     <>
       <motion.input
-        className='form-input'
+        className={`form-input ${exo.className}`}
         custom={custom}
         variants={variantContent}
         initial='hidden'
@@ -134,7 +137,7 @@ function MTextArea({ fc, value, custom, placeholder, id }: InputType) {
   return (
     <>
       <motion.textarea
-        className='form-textarea'
+        className={`form-textarea ${exo.className}`}
         custom={custom}
         variants={variantContent}
         initial='hidden'
@@ -158,7 +161,7 @@ function MButton({ nameButton }: ButtonType) {
         initial='hidden'
         animate='visible'
         viewport={{ once: true }}
-        className='link-button'
+        className={`link-button ${exo.className}`}
         type='submit'
       >
         {nameButton}

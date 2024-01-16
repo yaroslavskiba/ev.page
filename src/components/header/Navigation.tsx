@@ -6,6 +6,9 @@ import LinkComponent from './LinkComponent';
 import styles from './header.styles.module.css';
 import SocialButtons from './SocialButtons';
 import { useEffect, useState } from 'react';
+import { Caveat } from 'next/font/google';
+
+const cave = Caveat({ subsets: ['cyrillic'] });
 
 type NavType = {
   name: string;
@@ -42,7 +45,11 @@ function Navigation() {
         }`}
       >
         <div className={styles.logoGroup}>
-          <Link href='/' className={styles.logoTitle} onClick={toggleMenu}>
+          <Link
+            href='/'
+            className={`${styles.logoTitle} ${cave.className}`}
+            onClick={toggleMenu}
+          >
             Ev Cath
           </Link>
           <div>

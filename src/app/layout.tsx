@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { Montserrat, Caveat } from 'next/font/google';
+import { Exo_2 } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/header/Navigation';
 
-const mont = Montserrat({ subsets: ['latin'] });
+const exo = Exo_2({ subsets: ['cyrillic'] });
 
 export const metadata: Metadata = {
   title: 'ev.cath - Artist and Wall Decorator',
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang='ru'>
       <link rel='icon' href='/icon.ico' />
-      <body className={mont.className}>
+      <body className={exo.className}>
         <Navigation />
         <main>{children}</main>
       </body>

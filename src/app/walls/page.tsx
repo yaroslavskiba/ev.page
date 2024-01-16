@@ -1,9 +1,6 @@
 import { paintings } from '@/api/api';
 import WallComponent from '@/components/walls/Wall.component';
 import { cache } from 'react';
-import { MotionMainHeader } from '@/components/motionComponents/MotionGroupElement';
-import Link from 'next/link';
-import { TbArrowBigLeftLine } from 'react-icons/tb';
 
 const getItem = cache(async () => {
   const item = await paintings.getWalls();
@@ -16,7 +13,7 @@ async function Page() {
   return (
     <>
       <div className='container'>
-        <MotionMainHeader>Стены</MotionMainHeader>
+        {/* <MotionMainHeader>Стены</MotionMainHeader> */}
         {data.map(({ type, cost, url, id }) => {
           return (
             <WallComponent

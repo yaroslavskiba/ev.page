@@ -205,7 +205,7 @@ ul li {
   padding: 5px 15px 5px 0;
   background: inherit;
   color: #696969;
-  letter-spacing: 2px;
+  letter-spacing: 1.3px;
   cursor: pointer;
 }
 .link-button:before {

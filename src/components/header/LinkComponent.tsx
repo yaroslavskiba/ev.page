@@ -2,9 +2,9 @@
 
 import styles from './header.styles.module.css';
 import { usePathname, useRouter } from 'next/navigation';
-import { Montserrat } from 'next/font/google';
+import { Exo_2 } from 'next/font/google';
 
-const mont = Montserrat({ subsets: ['latin'] });
+const exo = Exo_2({ subsets: ['latin'] });
 
 interface LinkComponentPropsInterface {
   name: string;
@@ -40,7 +40,7 @@ function LinkComponent({
         }
         onClick={() => handleLink(path)}
       >
-        <span className={mont.className}>{name}</span>
+        <span className={exo.className}>{name}</span>
       </button>
     </>
   );
