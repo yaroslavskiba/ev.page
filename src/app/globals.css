@@ -118,6 +118,13 @@ ul li {
   opacity: 0.7;
 }
 
+.nav-header {
+  padding-top: 10px;
+  font-size: 14px;
+  opacity: 0.7;
+  font-weight: 200;
+}
+
 .gallery-nav-item {
   position: relative;
   min-width: 300px;

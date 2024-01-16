@@ -6,10 +6,12 @@ import {
   MParagraph,
 } from '@/components/motionComponents/MotionGroupElement';
 import SocialPersonalButtons from '@/components/custom/customComponents/SocialPersonal';
+import NavHeader from '@/components/custom/NavHeader';
 
 function Page() {
   return (
     <div className='container'>
+      <NavHeader text='Связаться со мной' />
       <section className='info-block'>
         <MDivImage custom={1}>
           <CustomImage url='/staticImages/form.webp' alt='form image' />

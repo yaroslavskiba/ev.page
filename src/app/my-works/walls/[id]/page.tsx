@@ -1,4 +1,5 @@
 import { paintings } from '@/api/api';
+import NavHeader from '@/components/custom/NavHeader';
 import CustomImage from '@/components/custom/contentStaticImage.tsx/Image.component';
 import SocialAddComponent from '@/components/custom/socialAddComponent/SocialAddComponent';
 import {
@@ -12,16 +13,23 @@ export default async function Page({ params }: { params: { id: string } }) {
 
   return (
     <div className='container'>
-      <MotionMainHeader>{data.type}</MotionMainHeader>
+      <NavHeader text={`Мои работы - стены - ${data.id}`} />
       <section className='info-block'>
         <MDivImage custom={1}>
           <CustomImage url={data.url} alt={data.url} />
         </MDivImage>
         <div className='split'>
-          <MParagraph custom={4}>
+          <MParagraph custom={2}>
+            <b>
+              <i>
+                <span style={{ fontSize: '20px' }}>{data.type}</span>
+              </i>
+            </b>
+          </MParagraph>
+          <MParagraph custom={3}>
             Цена: <i>${data.cost}</i>
           </MParagraph>
-          <SocialAddComponent start={5} />
+          <SocialAddComponent start={4} />
         </div>
       </section>
     </div>

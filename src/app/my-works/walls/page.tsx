@@ -1,4 +1,5 @@
 import { paintings } from '@/api/api';
+import NavHeader from '@/components/custom/NavHeader';
 import WallComponent from '@/components/walls/Wall.component';
 import { cache } from 'react';
 
@@ -13,6 +14,8 @@ async function Page() {
   return (
     <>
       <div className='container'>
+        <NavHeader text='Мои работы - Стены' />
+
         {/* <MotionMainHeader>Стены</MotionMainHeader> */}
         {data.map(({ type, cost, url, id }) => {
           return (
