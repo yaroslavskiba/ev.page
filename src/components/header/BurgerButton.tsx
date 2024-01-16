@@ -23,7 +23,7 @@ function BurgerButton({ isOpen, toggleMenu }: BurgerButtonPropsInterface) {
         <span
           className={styles.bar}
           style={{
-            width: `${isOpen ? '10px' : '35px'}`,
+            width: `${isOpen ? '0' : '35px'}`,
             top: '17px',
             left: `${isOpen ? '3px' : '3px'}`,
             transition: '1s ease',
