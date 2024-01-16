@@ -7,6 +7,31 @@ import {
 } from '@/components/motionComponents/MotionGroupElement';
 import SocialPersonalButtons from '@/components/custom/customComponents/SocialPersonal';
 import NavHeader from '@/components/custom/NavHeader';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'ev.cath - Контакты',
+  description:
+    'Контакты для связи с ev.cath. Тут вы сможете заказать картину, декор стен или задать вопрос по ее работам',
+  keywords: [
+    'ev.cath',
+    'купить картину',
+    'декор стен',
+    'художник',
+    'художник Минск',
+  ],
+  robots: {
+    index: true,
+    follow: true,
+    noarchive: true,
+    nosnippet: true,
+    noimageindex: true,
+    nocache: true,
+  },
+  authors: [{ name: 'yaroslavskiba' }],
+  generator: 'Художник',
+  creator: 'yaroslavskiba',
+};
 
 function Page() {
   return (

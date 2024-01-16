@@ -170,23 +170,6 @@ function MButton({ nameButton }: ButtonType) {
   );
 }
 
-function MotionMainHeader({ children }: { children: ReactNode }) {
-  return (
-    <>
-      <motion.h1
-        variants={variantDiv}
-        initial='hidden'
-        animate='visible'
-        className='main-route-header'
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
-        {children}
-      </motion.h1>
-    </>
-  );
-}
-
 function MLink({
   children,
   href,
@@ -244,7 +227,6 @@ export {
   MInput,
   MTextArea,
   MButton,
-  MotionMainHeader,
   MLink,
   MDivNav,
 };

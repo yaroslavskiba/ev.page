@@ -6,7 +6,7 @@ import Navigation from '@/components/header/Navigation';
 const exo = Exo_2({ subsets: ['cyrillic'] });
 
 export const metadata: Metadata = {
-  title: 'ev.cath - Artist and Wall Decorator',
+  title: 'ev.cath - Художник и Декоратор стен',
   description:
     'Впустите в свою жизнь искусство выдающегося художника и мастера декора стен ev.cath. Откройте для себя впечатляющие работы и уникальные дизайны, которые преобразят ваш дом и добавят ему неповторимость.',
   keywords: ['ev.cath', 'художник', 'декоратор стен', 'искусство', 'картина'],

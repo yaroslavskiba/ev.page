@@ -5,7 +5,6 @@ import SocialAddComponent from '@/components/custom/socialAddComponent/SocialAdd
 import {
   MDivImage,
   MParagraph,
-  MotionMainHeader,
 } from '@/components/motionComponents/MotionGroupElement';
 
 export default async function Page({ params }: { params: { id: string } }) {
