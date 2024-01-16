@@ -7,19 +7,14 @@ import {
   MotionMainHeader,
 } from '@/components/motionComponents/MotionGroupElement';
 import Link from 'next/link';
-import { TbArrowBigLeftLine } from 'react-icons/tb';
+import { PiArrowFatLeftLight } from 'react-icons/pi';
 
 export default async function Page({ params }: { params: { id: string } }) {
   const data = await paintings.getPainting(params.id);
 
   return (
     <div className='container'>
-      <MotionMainHeader>
-        <Link className='header-icon' href='/gallery/paintings'>
-          <TbArrowBigLeftLine />
-        </Link>
-        {data.name}
-      </MotionMainHeader>
+      <MotionMainHeader>{data.name}</MotionMainHeader>
       <section className='info-block'>
         <MDivImage custom={1}>
           <CustomImage url={data.url} alt={data.name} />

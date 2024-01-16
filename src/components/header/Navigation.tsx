@@ -13,8 +13,8 @@ type NavType = {
 };
 
 const nav: NavType[] = [
-  { name: 'Главная', path: '/' },
-  { name: 'Галерея', path: '/gallery' },
+  { name: 'Картины', path: '/' },
+  { name: 'Стены', path: '/walls' },
   { name: 'Обо мне', path: '/about' },
   { name: 'Контакты', path: '/contact' },
 ];

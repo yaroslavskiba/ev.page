@@ -16,12 +16,7 @@ async function Page() {
   return (
     <>
       <div className='container'>
-        <MotionMainHeader>
-          <Link className='header-icon' href='/gallery'>
-            <TbArrowBigLeftLine />
-          </Link>
-          Стены
-        </MotionMainHeader>
+        <MotionMainHeader>Стены</MotionMainHeader>
         {data.map(({ type, cost, url, id }) => {
           return (
             <WallComponent
