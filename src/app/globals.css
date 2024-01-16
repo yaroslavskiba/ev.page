@@ -151,8 +151,8 @@ ul li {
   left: 35%;
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(105, 105, 105, 1) 100%
+    rgba(105, 105, 105, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
   );
   transition: width 0.3s ease;
 }
