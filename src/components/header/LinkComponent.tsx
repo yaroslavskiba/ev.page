@@ -2,9 +2,9 @@
 
 import styles from './header.styles.module.css';
 import { usePathname, useRouter } from 'next/navigation';
-import { Tektur } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 
-const tektur = Tektur({ subsets: ['latin'] });
+const mont = Montserrat({ subsets: ['latin'] });
 
 interface LinkComponentPropsInterface {
   name: string;
@@ -40,7 +40,7 @@ function LinkComponent({
         }
         onClick={() => handleLink(path)}
       >
-        <span className={tektur.className}>{name}</span>
+        <span className={mont.className}>{name}</span>
       </button>
     </>
   );

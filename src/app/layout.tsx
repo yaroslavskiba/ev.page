@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { Tektur } from 'next/font/google';
+import { Montserrat, Tektur } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/header/Navigation';
 
-const tektur = Tektur({ subsets: ['latin'] });
+const mont = Montserrat({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'ev.cath - Artist and Wall Decorator',
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang='ru'>
       <link rel='icon' href='/icon.ico' />
-      <body className={tektur.className}>
+      <body className={mont.className}>
         <Navigation />
         <main>{children}</main>
       </body>

@@ -36,7 +36,7 @@ function PaintingComponent({ url, description, id, name, cost }: Painting) {
               <Link
                 href={`/gallery/paintings/${id}`}
                 className={styles.textLinkImage}
-                style={{ padding: '10px 15px' }}
+                style={{ padding: '10px 15px', color: '#fff' }}
               >
                 <i>Подробнее</i>
               </Link>

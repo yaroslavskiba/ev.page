@@ -100,6 +100,12 @@ ul li {
   flex-direction: column;
   gap: 25px;
 }
+.container a {
+  color: #696969;
+  text-decoration: underline;
+  font-size: inherit;
+  line-height: 1.5;
+}
 
 .main-route-header {
   margin: 0 0 5px 0;
@@ -135,7 +141,6 @@ ul li {
   width: 100%;
   height: 100%;
   font-size: 18px;
-  color: #fff;
 }
 .gallery-nav-p:hover {
   backdrop-filter: brightness(40%);
@@ -153,6 +158,15 @@ ul li {
   justify-content: center;
   gap: 25px;
 }
+
+.info-block-fullwidth {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
 .split {
   display: flex;
   flex-direction: column;

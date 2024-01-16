@@ -21,7 +21,11 @@ function Page() {
               sizes='100%'
               alt='Стены'
             />
-            <Link href='/gallery/paintings' className='gallery-nav-p'>
+            <Link
+              href='/gallery/paintings'
+              className='gallery-nav-p'
+              style={{ color: '#fff', textDecoration: 'none' }}
+            >
               Картины
             </Link>
           </MDivNav>
@@ -33,7 +37,11 @@ function Page() {
               sizes='100%'
               alt='Стены'
             />
-            <Link href='/gallery/walls' className='gallery-nav-p'>
+            <Link
+              href='/gallery/walls'
+              className='gallery-nav-p'
+              style={{ color: '#fff', textDecoration: 'none' }}
+            >
               Стены
             </Link>
           </MDivNav>
