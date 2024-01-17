@@ -17,6 +17,7 @@ function PaintingComponent({ url, description, id, name, cost }: Painting) {
               width={768}
               height={768}
               alt={name}
+              priority
             />
             <MInfinityDiv />
             <div className={styles.description}>

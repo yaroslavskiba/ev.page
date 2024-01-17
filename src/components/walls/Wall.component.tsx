@@ -19,6 +19,7 @@ function WallComponent({ url, id, type, cost }: Walls) {
               width={768}
               height={768}
               alt={type}
+              priority
             />
             <MInfinityDiv />
             <div className={styles.description}>
