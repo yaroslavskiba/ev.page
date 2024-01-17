@@ -17,7 +17,7 @@ export default async function Page({ params }: { params: { id: string } }) {
         <MDivImage custom={1}>
           <CustomImage url={data.url} alt={data.url} />
         </MDivImage>
-        <div className='split'>
+        <div className='split' style={{ alignItems: 'flex-start' }}>
           <MParagraph custom={2}>
             <b>
               <i>
