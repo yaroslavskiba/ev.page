@@ -11,14 +11,7 @@ function PaintingComponent({ url, description, id, name, cost }: Painting) {
       <article style={{ display: 'contents' }}>
         <MDivScroll name={name}>
           <section className={styles.painting}>
-            <Image
-              className={styles.imageSize}
-              src={url}
-              width={768}
-              height={768}
-              alt={name}
-              priority
-            />
+            <Image src={url} fill sizes='auto' alt={name} priority />
             <MInfinityDiv />
             <div className={styles.description}>
               <p>

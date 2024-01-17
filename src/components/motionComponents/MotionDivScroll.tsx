@@ -13,7 +13,6 @@ interface MotionSectionScrollProps {
 function MDivScroll({ children, name }: MotionSectionScrollProps) {
   return (
     <motion.div
-      className={styles.imageBox}
       initial='hidden'
       whileInView='visible'
       variants={variantDivScroll}
