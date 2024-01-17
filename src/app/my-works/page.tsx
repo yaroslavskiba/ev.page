@@ -11,9 +11,6 @@ function Page() {
     <>
       <div className='container'>
         <NavHeader text='Мои работы' />
-        {/* <MHeader center={true} custom={1}>
-          Мои работы:
-        </MHeader> */}
         <div className='info-block'>
           <MDivNav custom={2}>
             <Image
@@ -26,7 +23,11 @@ function Page() {
             <Link
               href='/my-works/paintings'
               className={`gallery-nav-p ${cave.className}`}
-              style={{ color: '#fff', textDecoration: 'none' }}
+              style={{
+                color: '#fff',
+                textDecoration: 'none',
+                boxShadow: '1px 2px 3px #696969',
+              }}
             >
               Картины
             </Link>
@@ -42,7 +43,11 @@ function Page() {
             <Link
               href='/my-works/walls'
               className={`gallery-nav-p ${cave.className}`}
-              style={{ color: '#fff', textDecoration: 'none' }}
+              style={{
+                color: '#fff',
+                textDecoration: 'none',
+                boxShadow: '1px 2px 3px #696969',
+              }}
             >
               Стены
             </Link>
