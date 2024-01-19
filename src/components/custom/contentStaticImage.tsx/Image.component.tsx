@@ -8,17 +8,15 @@ type ImageType = {
 
 function CustomImage({ url, alt }: ImageType) {
   return (
-    <div className={styles.imageBox}>
-      <div className={styles.painting}>
-        <Image
-          className={styles.imageSize}
-          src={url}
-          width={560}
-          height={560}
-          alt={alt}
-          priority
-        />
-      </div>
+    <div className={styles.painting}>
+      <Image
+        className={styles.imageSize}
+        src={url}
+        fill
+        sizes='100%'
+        alt={alt}
+        priority
+      />
     </div>
   );
 }
