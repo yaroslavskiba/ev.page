@@ -8,10 +8,80 @@ import {
 
 function Page() {
   return (
-    <div className='container'>
-      <NavHeader text='Обо мне' />
+    <div className='main-container'>
+      <div className='wrapper'>
+        <div className='main-block' style={{ flexDirection: 'column' }}>
+          <NavHeader text='Главная' />
+          <br />
+          <div style={{ display: 'flex' }}>
+            <div className='main-block-f'>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+              nesciunt id inventore, reprehenderit quasi officia a mollitia!
+              Impedit eligendi, rem saepe praesentium aperiam totam dolores
+              repellat, pariatur sapiente dolorum suscipit.
+            </div>
+            <div className='main-block-s'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+              molestiae explicabo numquam porro earum ullam asperiores nesciunt
+              quam perspiciatis! Illo veritatis assumenda nihil debitis tempora
+              enim iusto dicta non cum?
+            </div>
+          </div>
+        </div>
 
-      <section className='info-block'>
+        <div className='main-block'>
+          <div className='main-block-f'>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+            nesciunt id inventore, reprehenderit quasi officia a mollitia!
+            Impedit eligendi, rem saepe praesentium aperiam totam dolores
+            repellat, pariatur sapiente dolorum suscipit.
+          </div>
+          <div className='main-block-s'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+            molestiae explicabo numquam porro earum ullam asperiores nesciunt
+            quam perspiciatis! Illo veritatis assumenda nihil debitis tempora
+            enim iusto dicta non cum?
+          </div>
+        </div>
+
+        <div className='main-block'>
+          <div className='main-block-f'>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+            nesciunt id inventore, reprehenderit quasi officia a mollitia!
+            Impedit eligendi, rem saepe praesentium aperiam totam dolores
+            repellat, pariatur sapiente dolorum suscipit.
+          </div>
+          <div className='main-block-s'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+            molestiae explicabo numquam porro earum ullam asperiores nesciunt
+            quam perspiciatis! Illo veritatis assumenda nihil debitis tempora
+            enim iusto dicta non cum?
+          </div>
+        </div>
+
+        <div className='main-block'>
+          <div className='main-block-f'>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+            nesciunt id inventore, reprehenderit quasi officia a mollitia!
+            Impedit eligendi, rem saepe praesentium aperiam totam dolores
+            repellat, pariatur sapiente dolorum suscipit.
+          </div>
+          <div className='main-block-s'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+            molestiae explicabo numquam porro earum ullam asperiores nesciunt
+            quam perspiciatis! Illo veritatis assumenda nihil debitis tempora
+            enim iusto dicta non cum?
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Page;
+
+{
+  /* <section className='info-block'>
         <MDivImage custom={1}>
           <CustomImage url='/staticImages/main1.webp' alt='main image' />
         </MDivImage>
@@ -44,9 +114,5 @@ function Page() {
             поделиться своим искусством с вами.
           </MParagraph>
         </div>
-      </section>
-    </div>
-  );
+      </section> */
 }
-
-export default Page;

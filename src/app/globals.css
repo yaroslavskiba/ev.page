@@ -112,7 +112,7 @@ ul li {
   line-height: 1.5;
 }
 
-/* ----- контейнер ----- */
+/* ----- Анимированный хедер ----- */
 
 .main-route-header {
   margin: 0 0 5px 0;
@@ -125,12 +125,16 @@ ul li {
   opacity: 0.7;
 }
 
+/* ----- Навигационный хедер ----- */
+
 .nav-header {
   padding-top: 10px;
   font-size: 14px;
   opacity: 0.7;
   font-weight: 200;
 }
+
+/* ----- Блок /my-works ----- */
 
 .gallery-nav-item {
   position: relative;
@@ -177,19 +181,15 @@ ul li {
   transition: 0.3s ease;
 }
 
+/* ----- Информационный блок ----- */
+
 .info-block {
   display: flex;
   justify-content: center;
   gap: 25px;
 }
 
-.info-block-fullwidth {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
+/* ----- Разделение информационного блока ----- */
 
 .split {
   display: flex;
@@ -198,6 +198,8 @@ ul li {
   max-width: 560px;
   width: 100%;
 }
+
+/* ----- Форма ----- */
 
 .form {
   margin-top: 25px;
@@ -230,6 +232,8 @@ ul li {
   min-width: 250px;
 }
 
+/* ----- Кнопка отправки формы ----- */
+
 .link-button {
   position: relative;
   width: min-content;
@@ -261,6 +265,36 @@ ul li {
   width: 0;
 }
 
+/* ----- Информационный блок ----- */
+.main-container {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  padding: 45px 0 45px 300px;
+}
+.wrapper {
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.main-block {
+  flex-wrap: wrap;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  scroll-snap-align: start;
+}
+.main-block-f {
+  padding: 0 20px;
+  flex: 1 1 50%;
+}
+.main-block-s {
+  padding: 0 20px;
+  flex: 1 1 50%;
+}
+
+/* ----- Медиазапросы ----- */
+
 @media (max-width: 1240px) {
   .info-block {
     flex-wrap: wrap;
@@ -276,8 +310,8 @@ ul li {
     padding: 0 15px;
   }
 
-  .gallery-container {
-    padding: 3%;
+  .main-container {
+    padding: 85px 5px 5px 5px;
   }
 
   .container {
