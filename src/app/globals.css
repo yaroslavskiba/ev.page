@@ -269,28 +269,79 @@ ul li {
 .main-container {
   overflow: hidden;
   width: 100%;
-  height: 100vh;
-  padding: 45px 0 45px 300px;
+  height: 100svh;
+  padding: 45px 0 0 300px;
 }
 .wrapper {
   height: 100%;
+  width: 100%;
   overflow-y: scroll;
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
 }
 .main-block {
-  flex-wrap: wrap;
   display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 25px;
   height: 100%;
   width: 100%;
   scroll-snap-align: start;
 }
-.main-block-f {
-  padding: 0 20px;
-  flex: 1 1 50%;
+.main-f {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 .main-block-s {
-  padding: 0 20px;
-  flex: 1 1 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 320px;
+  max-width: 560px;
+  width: 100%;
+}
+.main-block-f {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  max-width: 560px;
+  width: 100%;
+}
+.words-list {
+  font-size: 24px;
+  overflow: hidden;
+  position: relative;
+}
+.inner {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  animation: loop 10s linear infinite;
+}
+.fade {
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    #fff,
+    transparent 15%,
+    transparent 85%,
+    #fff
+  );
+  inset: 0;
+  pointer-events: none;
+}
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-90% - 20px));
+  }
 }
 
 /* ----- Медиазапросы ----- */
@@ -311,7 +362,15 @@ ul li {
   }
 
   .main-container {
-    padding: 85px 5px 5px 5px;
+    padding: 85px 0 5px 0;
+  }
+
+  .main-block-f {
+    justify-content: center;
+  }
+
+  .main-block-s {
+    justify-content: center;
   }
 
   .container {

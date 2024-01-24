@@ -10,21 +10,36 @@ function Page() {
   return (
     <div className='main-container'>
       <div className='wrapper'>
-        <div className='main-block' style={{ flexDirection: 'column' }}>
-          <NavHeader text='Главная' />
+        <div
+          className='main-f'
+          style={{ flexDirection: 'column', position: 'relative' }}
+        >
+          <div style={{ position: 'absolute', left: '5px', top: '20px' }}>
+            <NavHeader text='Главная' />
+          </div>
           <br />
-          <div style={{ display: 'flex' }}>
+          <div className='main-block'>
             <div className='main-block-f'>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
-              nesciunt id inventore, reprehenderit quasi officia a mollitia!
-              Impedit eligendi, rem saepe praesentium aperiam totam dolores
-              repellat, pariatur sapiente dolorum suscipit.
+              <></>
             </div>
             <div className='main-block-s'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              molestiae explicabo numquam porro earum ullam asperiores nesciunt
-              quam perspiciatis! Illo veritatis assumenda nihil debitis tempora
-              enim iusto dicta non cum?
+              <div className='words-list'>
+                <div className='inner'>
+                  <span className='word'>Екатерина</span>
+                  <span className='word'>Евсеенко</span>
+                  <span className='word'>Художник</span>
+                  <span className='word'>Декоратор</span>
+                  <span className='word'>Екатерина</span>
+                  <span className='word'>Евсеенко</span>
+                  <span className='word'>Художник</span>
+                  <span className='word'>Декоратор</span>
+                  <span className='word'>Екатерина</span>
+                  <span className='word'>Евсеенко</span>
+                  <span className='word'>Художник</span>
+                  <span className='word'>Декоратор</span>
+                </div>
+                <div className='fade'></div>
+              </div>
             </div>
           </div>
         </div>
@@ -37,10 +52,7 @@ function Page() {
             repellat, pariatur sapiente dolorum suscipit.
           </div>
           <div className='main-block-s'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-            molestiae explicabo numquam porro earum ullam asperiores nesciunt
-            quam perspiciatis! Illo veritatis assumenda nihil debitis tempora
-            enim iusto dicta non cum?
+            <></>
           </div>
         </div>
 
@@ -52,19 +64,13 @@ function Page() {
             repellat, pariatur sapiente dolorum suscipit.
           </div>
           <div className='main-block-s'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-            molestiae explicabo numquam porro earum ullam asperiores nesciunt
-            quam perspiciatis! Illo veritatis assumenda nihil debitis tempora
-            enim iusto dicta non cum?
+            <></>
           </div>
         </div>
 
         <div className='main-block'>
           <div className='main-block-f'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
-            nesciunt id inventore, reprehenderit quasi officia a mollitia!
-            Impedit eligendi, rem saepe praesentium aperiam totam dolores
-            repellat, pariatur sapiente dolorum suscipit.
+            <></>
           </div>
           <div className='main-block-s'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
