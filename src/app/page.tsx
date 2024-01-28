@@ -1,10 +1,6 @@
 import NavHeader from '@/components/custom/NavHeader';
+import Video from '@/components/custom/Video';
 import CustomImage from '@/components/custom/contentStaticImage.tsx/Image.component';
-import {
-  MDivImage,
-  MHeader,
-  MParagraph,
-} from '@/components/motionComponents/MotionGroupElement';
 
 function Page() {
   return (
@@ -20,9 +16,13 @@ function Page() {
           <br />
           <div className='main-block'>
             <div className='main-block-f'>
-              <></>
+              <>
+                <Video src={'/v_0.mp4'} />
+              </>
             </div>
             <div className='main-block-s'>
+              <h2>Ev.cath</h2>
+              <br />
               <div className='words-list'>
                 <div className='inner'>
                   <span className='word'>Екатерина</span>
@@ -52,7 +52,7 @@ function Page() {
             repellat, pariatur sapiente dolorum suscipit.
           </div>
           <div className='main-block-s'>
-            <></>
+            <Video src={'/v_1.mp4'} />
           </div>
         </div>
 
@@ -70,7 +70,7 @@ function Page() {
 
         <div className='main-block'>
           <div className='main-block-f'>
-            <></>
+            <Video src={'/v_2.mp4'} />
           </div>
           <div className='main-block-s'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Non

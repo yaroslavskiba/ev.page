@@ -267,7 +267,6 @@ ul li {
 
 /* ----- Информационный блок ----- */
 .main-container {
-  overflow: hidden;
   width: 100%;
   height: 100svh;
   padding: 45px 0 0 300px;
@@ -275,9 +274,7 @@ ul li {
 .wrapper {
   height: 100%;
   width: 100%;
-  overflow-y: scroll;
   overflow-x: hidden;
-  scroll-snap-type: y mandatory;
 }
 .main-block {
   display: flex;
@@ -286,11 +283,12 @@ ul li {
   gap: 25px;
   height: 100%;
   width: 100%;
-  scroll-snap-align: start;
+  margin-bottom: 5%;
 }
 .main-f {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   position: relative;
   height: 100%;
   width: 100%;
