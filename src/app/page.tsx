@@ -9,10 +9,15 @@ function Page() {
       <div className='wrapper'>
         <div className='main-block'>
           <div className='media'>
-            <Video src='/v_1.mp4' />
+            <Video src='/v_0.mp4' />
           </div>
           <div className='info'>
-            <></>
+            <>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
+              minus aliquid qui nulla aspernatur corrupti cupiditate? Earum
+              culpa, quae nulla quod eaque autem ad doloremque praesentium quam
+              minima nisi ullam.
+            </>
           </div>
         </div>
         <div className='main-block'>
@@ -22,10 +27,14 @@ function Page() {
             maiores sed, adipisci nobis voluptatibus illo officia ex, accusamus
             perferendis at cum molestias!
           </div>
-          <div className='media'></div>
+          <div className='media'>
+            <Video src='/v_3.mp4' />
+          </div>
         </div>
         <div className='main-block'>
-          <div className='media'></div>
+          <div className='media'>
+            <Video src='/v_2.mp4' />
+          </div>
           <div className='info'>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
             doloremque voluptate deserunt quos inventore vel magnam dolor
