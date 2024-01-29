@@ -376,9 +376,6 @@ ul li {
   .main-container {
     padding: 85px 0 45px 0;
   }
-  .main-block {
-    flex: 1 1 calc(50svh - 45px);
-  }
 
   .container {
     padding: 85px 5px 45px 5px;
