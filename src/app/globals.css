@@ -281,7 +281,7 @@ ul li {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 45px;
   height: 100%;
   width: 100%;
 }
@@ -301,6 +301,21 @@ ul li {
   max-width: 560px;
   width: 100%;
 }
+.info-title {
+  font-size: 36px;
+  font-weight: 400;
+  margin: 0 auto 0 0;
+}
+.info-subtitle {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 auto 0 0;
+}
+.bottom {
+  justify-content: flex-end;
+  position: relative;
+  bottom: 20%;
+}
 
 /* ----- Медиазапросы ----- */
 
@@ -308,6 +323,11 @@ ul li {
   .info-block {
     flex-wrap: wrap;
     gap: 55px;
+  }
+  .bottom {
+    justify-content: flex-end;
+    position: relative;
+    bottom: 0;
   }
   .split {
     align-items: center;

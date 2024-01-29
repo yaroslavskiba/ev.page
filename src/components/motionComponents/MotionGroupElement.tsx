@@ -6,7 +6,6 @@ import {
   variantContent,
   variantContentBottom,
   variantContentTop,
-  variantDiv,
 } from './variants';
 import { ContactData } from '../custom/contactForm/ContactForm';
 import { Exo_2 } from 'next/font/google';

@@ -4,7 +4,6 @@
   max-height: 660px;
 }
 .videoContainer {
-  object-fit: fill;
   width: 100%;
   box-shadow: none;
 }

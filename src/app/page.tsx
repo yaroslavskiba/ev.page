@@ -1,6 +1,12 @@
 import NavHeader from '@/components/custom/NavHeader';
 import Video from '@/components/custom/Video';
 import CustomImage from '@/components/custom/contentStaticImage.tsx/Image.component';
+import {
+  MDivScrollContainer,
+  MSubTitleScroll,
+  MTextScroll,
+  MTitleScroll,
+} from '@/components/motionComponents/MMainComponents';
 
 function Page() {
   return (
@@ -8,15 +14,20 @@ function Page() {
       <NavHeader text={'Главная'} />
       <div className='wrapper'>
         <div className='main-block'>
+          <br />
           <div className='media'>
-            <Video src='/v_0.mp4' />
+            <MDivScrollContainer>
+              <Video src='/v_0.mp4' />
+            </MDivScrollContainer>
           </div>
-          <div className='info'>
+          <div className='info bottom'>
             <>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
-              minus aliquid qui nulla aspernatur corrupti cupiditate? Earum
-              culpa, quae nulla quod eaque autem ad doloremque praesentium quam
-              minima nisi ullam.
+              <MTitleScroll custom={1}>Ev cath</MTitleScroll>
+              <MSubTitleScroll custom={2}>Екатерина Евсеенко</MSubTitleScroll>
+              <MTextScroll custom={3}>
+                <b>-</b> <i>художник / декоратор стен</i>
+              </MTextScroll>
+              <br />
             </>
           </div>
         </div>
@@ -28,12 +39,16 @@ function Page() {
             perferendis at cum molestias!
           </div>
           <div className='media'>
-            <Video src='/v_3.mp4' />
+            <MDivScrollContainer>
+              <Video src='/v_3.mp4' />
+            </MDivScrollContainer>
           </div>
         </div>
         <div className='main-block'>
           <div className='media'>
-            <Video src='/v_2.mp4' />
+            <MDivScrollContainer>
+              <Video src='/v_2.mp4' />
+            </MDivScrollContainer>
           </div>
           <div className='info'>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
