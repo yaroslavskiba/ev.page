@@ -13,7 +13,7 @@ function WallComponent({ url, id, type, cost }: Walls) {
       <article style={{ display: 'contents' }}>
         <MDivScroll name={type}>
           <section className={styles.painting}>
-            <Image src={url} fill sizes='auto' alt={type} priority />
+            <Image src={url} fill sizes='100%' alt={type} priority />
             <MInfinityDiv />
             <div className={styles.description}>
               <p>
