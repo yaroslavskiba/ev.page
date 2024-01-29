@@ -350,7 +350,7 @@ ul li {
 
 @media (max-width: 1240px) {
   .main-block {
-    flex: 1 1 calc(60svh - 45px);
+    flex: 1 1 calc(70svh - 45px);
   }
   .info-block {
     flex-wrap: wrap;
