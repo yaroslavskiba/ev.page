@@ -5,78 +5,32 @@ import CustomImage from '@/components/custom/contentStaticImage.tsx/Image.compon
 function Page() {
   return (
     <div className='main-container'>
+      <NavHeader text={'Главная'} />
       <div className='wrapper'>
-        <div
-          className='main-f'
-          style={{ flexDirection: 'column', position: 'relative' }}
-        >
-          <div style={{ position: 'absolute', left: '5px', top: '20px' }}>
-            <NavHeader text='Главная' />
-          </div>
-          <br />
-          <div className='main-block'>
-            <div className='main-block-f'>
-              <>
-                <Video src={'/v_0.mp4'} />
-              </>
-            </div>
-            <div className='main-block-s'>
-              <h2>Ev.cath</h2>
-              <br />
-              <div className='words-list'>
-                <div className='inner'>
-                  <span className='word'>Екатерина</span>
-                  <span className='word'>Евсеенко</span>
-                  <span className='word'>Художник</span>
-                  <span className='word'>Декоратор</span>
-                  <span className='word'>Екатерина</span>
-                  <span className='word'>Евсеенко</span>
-                  <span className='word'>Художник</span>
-                  <span className='word'>Декоратор</span>
-                  <span className='word'>Екатерина</span>
-                  <span className='word'>Евсеенко</span>
-                  <span className='word'>Художник</span>
-                  <span className='word'>Декоратор</span>
-                </div>
-                <div className='fade'></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className='main-block'>
-          <div className='main-block-f'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
-            nesciunt id inventore, reprehenderit quasi officia a mollitia!
-            Impedit eligendi, rem saepe praesentium aperiam totam dolores
-            repellat, pariatur sapiente dolorum suscipit.
+          <div className='media'>
+            <Video src='/v_1.mp4' />
           </div>
-          <div className='main-block-s'>
-            <Video src={'/v_1.mp4'} />
-          </div>
-        </div>
-
-        <div className='main-block'>
-          <div className='main-block-f'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
-            nesciunt id inventore, reprehenderit quasi officia a mollitia!
-            Impedit eligendi, rem saepe praesentium aperiam totam dolores
-            repellat, pariatur sapiente dolorum suscipit.
-          </div>
-          <div className='main-block-s'>
+          <div className='info'>
             <></>
           </div>
         </div>
-
         <div className='main-block'>
-          <div className='main-block-f'>
-            <Video src={'/v_2.mp4'} />
+          <div className='info'>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
+            doloremque voluptate deserunt quos inventore vel magnam dolor
+            maiores sed, adipisci nobis voluptatibus illo officia ex, accusamus
+            perferendis at cum molestias!
           </div>
-          <div className='main-block-s'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-            molestiae explicabo numquam porro earum ullam asperiores nesciunt
-            quam perspiciatis! Illo veritatis assumenda nihil debitis tempora
-            enim iusto dicta non cum?
+          <div className='media'></div>
+        </div>
+        <div className='main-block'>
+          <div className='media'></div>
+          <div className='info'>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
+            doloremque voluptate deserunt quos inventore vel magnam dolor
+            maiores sed, adipisci nobis voluptatibus illo officia ex, accusamus
+            perferendis at cum molestias!
           </div>
         </div>
       </div>
