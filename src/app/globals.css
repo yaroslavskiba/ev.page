@@ -324,12 +324,12 @@ ul li {
 .bottom {
   justify-content: flex-end;
   position: relative;
-  bottom: 10%;
+  bottom: 15%;
 }
 .top {
   justify-content: flex-start;
   position: relative;
-  top: 10%;
+  top: 20%;
 }
 .fullscreenInfo {
   width: 100%;
@@ -349,6 +349,9 @@ ul li {
 /* ----- Медиазапросы ----- */
 
 @media (max-width: 1240px) {
+  .main-block {
+    flex: 1 1 calc(60svh - 45px);
+  }
   .info-block {
     flex-wrap: wrap;
     gap: 55px;
@@ -373,13 +376,8 @@ ul li {
   .main-container {
     padding: 85px 0 45px 0;
   }
-
-  .main-block-f {
-    justify-content: center;
-  }
-
-  .main-block-s {
-    justify-content: center;
+  .main-block {
+    flex: 1 1 calc(50svh - 45px);
   }
 
   .container {
