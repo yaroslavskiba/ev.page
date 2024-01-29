@@ -3,10 +3,12 @@ import Video from '@/components/custom/Video';
 import CustomImage from '@/components/custom/contentStaticImage.tsx/Image.component';
 import {
   MDivScrollContainer,
+  MGroupDiv,
   MSubTitleScroll,
   MTextScroll,
   MTitleScroll,
 } from '@/components/motionComponents/MMainComponents';
+import Link from 'next/link';
 
 function Page() {
   return (
@@ -28,33 +30,39 @@ function Page() {
                 <b>-</b> <i>художник / декоратор стен</i>
               </MTextScroll>
               <br />
+              <MGroupDiv custom={4}>
+                <Link className='link-button' href={'/my-works/painitngs'}>
+                  Картины
+                </Link>
+                <Link className='link-button' href={'/my-works/walls'}>
+                  Декор стен
+                </Link>
+              </MGroupDiv>
+              <br />
             </>
           </div>
         </div>
+
         <div className='main-block'>
-          <div className='info'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
-            doloremque voluptate deserunt quos inventore vel magnam dolor
-            maiores sed, adipisci nobis voluptatibus illo officia ex, accusamus
-            perferendis at cum molestias!
-          </div>
-          <div className='media'>
-            <MDivScrollContainer>
-              <Video src='/v_3.mp4' />
-            </MDivScrollContainer>
+          <div className='fullscreenInfo'>
+            <MTitleScroll custom={1}>
+              ... Что-то тут надо написать. Короткое но по смыслу емкое <br />
+              Кстати пары строк будет достаточно
+            </MTitleScroll>
           </div>
         </div>
+
         <div className='main-block'>
+          <div className='info top'>
+            <MTitleScroll custom={1}>
+              Дальше нужен блок для картин и стен, отличающийся от первого,
+              слишком много однотипного тоже плохо
+            </MTitleScroll>
+          </div>
           <div className='media'>
             <MDivScrollContainer>
               <Video src='/v_2.mp4' />
             </MDivScrollContainer>
-          </div>
-          <div className='info'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
-            doloremque voluptate deserunt quos inventore vel magnam dolor
-            maiores sed, adipisci nobis voluptatibus illo officia ex, accusamus
-            perferendis at cum molestias!
           </div>
         </div>
       </div>

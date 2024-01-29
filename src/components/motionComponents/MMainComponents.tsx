@@ -39,7 +39,7 @@ function MTitleScroll({
       whileInView='visible'
       variants={variantDivText}
       transition={{ duration: 0.5 }}
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.4 }}
     >
       {children}
     </motion.span>
@@ -102,4 +102,32 @@ function MDivScrollContainer({ children }: { children: ReactNode }) {
   );
 }
 
-export { MDivScrollContainer, MTextScroll, MTitleScroll, MSubTitleScroll };
+function MGroupDiv({
+  children,
+  custom,
+}: {
+  children: ReactNode;
+  custom: number;
+}) {
+  return (
+    <motion.div
+      custom={custom}
+      className='info-group'
+      initial='hidden'
+      whileInView='visible'
+      variants={variantDivText}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true, amount: 0.1 }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+export {
+  MDivScrollContainer,
+  MTextScroll,
+  MTitleScroll,
+  MSubTitleScroll,
+  MGroupDiv,
+};

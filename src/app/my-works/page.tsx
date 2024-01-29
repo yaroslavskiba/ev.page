@@ -1,4 +1,5 @@
 import NavHeader from '@/components/custom/NavHeader';
+import { MTitleScroll } from '@/components/motionComponents/MMainComponents';
 import { MDivNav } from '@/components/motionComponents/MotionGroupElement';
 import { Caveat } from 'next/font/google';
 import Image from 'next/image';
@@ -53,6 +54,9 @@ function Page() {
             </Link>
           </MDivNav>
         </div>
+        <MTitleScroll custom={1}>
+          Будет переделываться, мне не нравится
+        </MTitleScroll>
       </div>
     </>
   );
