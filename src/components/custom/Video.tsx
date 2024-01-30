@@ -62,7 +62,6 @@ export function Video({ src }: VideoType) {
         playsInline={true}
         muted
         controls={false}
-        poster='/frame.webp'
       >
         <source src={src} type='video/mp4' />
         Your browser does not support the video tag.

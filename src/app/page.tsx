@@ -20,7 +20,7 @@ function Page() {
         <div className='main-block'>
           <br />
           <div className='media'>
-            <Video src='/v_0.mp4' />
+            <Video src='/v_1.mp4' />
           </div>
           <div className='info bottom'>
             <>
