@@ -15,17 +15,6 @@ export const metadata: Metadata = {
     'Минск',
     'художник Минск',
   ],
-  robots: {
-    index: true,
-    follow: true,
-    noarchive: true,
-    nosnippet: true,
-    noimageindex: true,
-    nocache: true,
-  },
-  authors: [{ name: 'yaroslavskiba' }],
-  generator: 'Художник',
-  creator: 'yaroslavskiba',
 };
 
 const getItem = cache(async () => {
@@ -40,7 +29,6 @@ async function Page() {
     <>
       <div className='container'>
         <NavHeader text='Мои работы - картины' />
-        {/* <MotionMainHeader>Картины</MotionMainHeader> */}
         {data.map(({ name, description, cost, url, id }) => {
           return (
             <PaintingComponent

@@ -20,17 +20,6 @@ export const metadata: Metadata = {
     'художник',
     'художник Минск',
   ],
-  robots: {
-    index: true,
-    follow: true,
-    noarchive: true,
-    nosnippet: true,
-    noimageindex: true,
-    nocache: true,
-  },
-  authors: [{ name: 'yaroslavskiba' }],
-  generator: 'Художник',
-  creator: 'yaroslavskiba',
 };
 
 function Page() {

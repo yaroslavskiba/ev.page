@@ -17,17 +17,6 @@ export const metadata: Metadata = {
     'скалы',
     'декор инерьера Минск',
   ],
-  robots: {
-    index: true,
-    follow: true,
-    noarchive: true,
-    nosnippet: true,
-    noimageindex: true,
-    nocache: true,
-  },
-  authors: [{ name: 'yaroslavskiba' }],
-  generator: 'Художник',
-  creator: 'yaroslavskiba',
 };
 
 const getItem = cache(async () => {
