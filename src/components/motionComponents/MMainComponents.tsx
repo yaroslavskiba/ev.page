@@ -91,6 +91,7 @@ function MSubTitleScroll({
 function MDivScrollContainer({ children }: { children: ReactNode }) {
   return (
     <motion.div
+      style={{ position: 'relative' }}
       initial='hidden'
       whileInView='visible'
       variants={variantDiv}
