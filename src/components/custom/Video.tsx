@@ -59,7 +59,7 @@ export function Video({ src }: VideoType) {
         ref={ref}
         className={styles.videoContainer}
         preload='auto'
-        playsInline
+        playsInline={true}
         muted
         controls={false}
         poster='/frame.webp'
