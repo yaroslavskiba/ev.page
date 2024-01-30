@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   description:
     'Впустите в свою жизнь искусство выдающегося художника и мастера декора стен ev.cath. Откройте для себя впечатляющие работы и уникальные дизайны, которые преобразят ваш дом и добавят ему неповторимость.',
   keywords: ['ev.cath', 'художник', 'декоратор стен', 'искусство', 'картина'],
+  manifest: '/manifest.json',
   robots: {
     index: true,
     follow: true,
@@ -18,9 +19,10 @@ export const metadata: Metadata = {
     noimageindex: true,
     nocache: true,
   },
-  authors: [{ name: 'yaroslavskiba' }],
+  themeColor: [{ media: '(prefers-color-scheme: light)', color: '#fff' }],
   generator: 'Художник',
   creator: 'yaroslavskiba',
+  icons: [{ rel: 'ev cath painting image', url: '/icon.ico' }],
 };
 
 export default function RootLayout({
