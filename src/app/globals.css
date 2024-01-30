@@ -350,16 +350,19 @@ ul li {
 
 /* ----- Медиазапросы ----- */
 
-@media (max-width: 1240px) {
-  .info-block {
-    flex-wrap: wrap;
-    gap: 55px;
-  }
+@media (max-width: 1520px) {
   .bottom {
     bottom: 0;
   }
   .top {
     top: 0;
+  }
+}
+
+@media (max-width: 1240px) {
+  .info-block {
+    flex-wrap: wrap;
+    gap: 55px;
   }
 
   .split {
