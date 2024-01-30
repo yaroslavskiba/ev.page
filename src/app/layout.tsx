@@ -16,10 +16,6 @@ export const metadata: Metadata = {
     noarchive: true,
     nosnippet: true,
     noimageindex: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
   },
   themeColor: '#fff',
   generator: 'Художник',
