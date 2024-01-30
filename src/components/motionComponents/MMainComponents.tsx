@@ -66,6 +66,28 @@ function MTextScroll({
     </motion.span>
   );
 }
+
+function MParagraphScroll({
+  children,
+  custom,
+}: {
+  children: ReactNode;
+  custom: number;
+}) {
+  return (
+    <motion.p
+      custom={custom}
+      initial='hidden'
+      whileInView='visible'
+      variants={variantDivText}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true, amount: 0.1 }}
+    >
+      {children}
+    </motion.p>
+  );
+}
+
 function MSubTitleScroll({
   children,
   custom,
@@ -130,5 +152,6 @@ export {
   MTextScroll,
   MTitleScroll,
   MSubTitleScroll,
+  MParagraphScroll,
   MGroupDiv,
 };

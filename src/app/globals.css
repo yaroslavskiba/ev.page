@@ -302,8 +302,10 @@ ul li {
   width: 100%;
 }
 .info-group {
-  width: 100%;
+  width: 30%;
   display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .info-group a {
@@ -349,9 +351,6 @@ ul li {
 /* ----- Медиазапросы ----- */
 
 @media (max-width: 1240px) {
-  .main-block {
-    flex: 1 1 calc(70svh - 45px);
-  }
   .info-block {
     flex-wrap: wrap;
     gap: 55px;
@@ -371,6 +370,10 @@ ul li {
 @media (max-width: 768px) {
   body {
     padding: 0 15px;
+  }
+
+  .info-group {
+    width: 50%;
   }
 
   .main-container {

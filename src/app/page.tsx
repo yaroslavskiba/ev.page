@@ -2,9 +2,11 @@ import NavHeader from '@/components/custom/NavHeader';
 import Video from '@/components/custom/Video';
 import CustomSVGImage from '@/components/custom/bgImages/customBgImage';
 import CustomImage from '@/components/custom/contentStaticImage.tsx/Image.component';
+import SocialButtons from '@/components/header/SocialButtons';
 import {
   MDivScrollContainer,
   MGroupDiv,
+  MParagraphScroll,
   MSubTitleScroll,
   MTextScroll,
   MTitleScroll,
@@ -36,7 +38,7 @@ function Page() {
               <MTitleScroll custom={1}>Ev cath</MTitleScroll>
               <MSubTitleScroll custom={2}>Екатерина Евсеенко</MSubTitleScroll>
               <MTextScroll custom={3}>
-                <b>-</b> <i>художник / декоратор стен</i>
+                <b>-</b> художник / декоратор стен
               </MTextScroll>
             </>
           </div>
@@ -46,33 +48,63 @@ function Page() {
           <div className='fullscreenInfo'>
             <MDivScrollContainer>
               <CustomSVGImage
-                src='/svg/14.svg'
+                src='/svg/9.svg'
                 width={250}
                 height={200}
-                styles={{ opacity: '.7' }}
+                styles={{
+                  opacity: '.7',
+                  transform: 'scaleX(-1)',
+                }}
               />
             </MDivScrollContainer>
-            <MTitleScroll custom={1}>
-              ... Что-то тут надо написать. Короткое но по смыслу емкое <br />
-              Кстати пары строк будет достаточно
-            </MTitleScroll>
+            <MTitleScroll custom={1}>Художник / Декоратор</MTitleScroll>
+            <MParagraphScroll custom={2}>
+              Создаю картины по своему видению и смогу реализовать <b>Ваши </b>
+              идеи!
+              <br />
+              Взглянуть на работы:
+              <br />
+            </MParagraphScroll>
+            <MGroupDiv custom={3}>
+              <Link href='/my-works/paintings'>
+                <i>Картины</i>
+              </Link>
+              <Link href='/my-works/walls'>
+                <i>Декор стен</i>
+              </Link>
+            </MGroupDiv>
           </div>
         </div>
 
-        <div className='main-block'>
+        <div className='main-block' style={{ flexWrap: 'wrap-reverse' }}>
           <div className='info top'>
-            <MTitleScroll custom={1}>
-              Дальше нужен блок для картин и стен, отличающийся от первого,
-              слишком много однотипного тоже плохо
-            </MTitleScroll>
+            <MTitleScroll custom={1}>Будем на связи</MTitleScroll>
+            <br />
+            <MParagraphScroll custom={2}>
+              Напишите мне и <b>вместе </b> мы сможем сделать ваш дом уютнее!
+              <br />
+            </MParagraphScroll>
+            <br />
+            <MGroupDiv custom={3}>
+              <SocialButtons />
+            </MGroupDiv>
+            <br />
+            <MGroupDiv custom={3}>
+              <Link href='/contact'>
+                <i>Связаться со мной</i>
+              </Link>
+              <a href='https://t.me/Ev_Cath_helper_bot' target='blank'>
+                <i>Бот телеграм</i>
+              </a>
+            </MGroupDiv>
             <br />
             <br />
             <MDivScrollContainer>
               <CustomSVGImage
-                src='/svg/5.svg'
+                src='/svg/10.svg'
                 width={150}
                 height={200}
-                styles={{ opacity: '.7', transform: 'rotate(30deg)' }}
+                styles={{ opacity: '.7', transform: 'rotate(90deg)' }}
               />
             </MDivScrollContainer>
           </div>
