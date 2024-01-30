@@ -19,10 +19,9 @@ export const metadata: Metadata = {
     noimageindex: true,
     nocache: true,
   },
-  themeColor: [{ media: '(prefers-color-scheme: light)', color: '#fff' }],
+  themeColor: '#fff',
   generator: 'Художник',
   creator: 'yaroslavskiba',
-  icons: [{ rel: 'ev cath painting image', url: '/icon.ico' }],
 };
 
 export default function RootLayout({
