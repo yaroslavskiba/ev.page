@@ -8,9 +8,9 @@ import {
   MGroupDiv,
   MParagraphScroll,
   MSubTitleScroll,
-  MTextScroll,
   MTitleScroll,
 } from '@/components/motionComponents/MMainComponents';
+import { MDivImage } from '@/components/motionComponents/MotionGroupElement';
 import Link from 'next/link';
 
 function Page() {
@@ -37,9 +37,9 @@ function Page() {
               </MDivScrollContainer>
               <MTitleScroll custom={1}>Ev cath</MTitleScroll>
               <MSubTitleScroll custom={2}>Екатерина Евсеенко</MSubTitleScroll>
-              <MTextScroll custom={3}>
+              <MParagraphScroll custom={3}>
                 <b>-</b> художник / декоратор стен
-              </MTextScroll>
+              </MParagraphScroll>
             </>
           </div>
         </div>
@@ -111,10 +111,12 @@ function Page() {
             </MDivScrollContainer>
           </div>
           <div className='media'>
-            <CustomImage
-              url={'/staticImages/main1.webp'}
-              alt={'Главное изображение'}
-            />
+            <MDivImage custom={1}>
+              <CustomImage
+                url={'/staticImages/main1.webp'}
+                alt={'Главное изображение'}
+              />
+            </MDivImage>
           </div>
         </div>
       </div>

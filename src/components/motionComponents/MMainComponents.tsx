@@ -32,7 +32,7 @@ function MTitleScroll({
   custom: number;
 }) {
   return (
-    <motion.span
+    <motion.h2
       custom={custom}
       className={`info-title ${cave.className}`}
       initial='hidden'
@@ -42,11 +42,11 @@ function MTitleScroll({
       viewport={{ once: true, amount: 0.4 }}
     >
       {children}
-    </motion.span>
+    </motion.h2>
   );
 }
 
-function MTextScroll({
+function MSubTitleScroll({
   children,
   custom,
 }: {
@@ -54,16 +54,17 @@ function MTextScroll({
   custom: number;
 }) {
   return (
-    <motion.span
+    <motion.h3
       custom={custom}
+      className={`info-subtitle ${cave.className}`}
       initial='hidden'
       whileInView='visible'
       variants={variantDivText}
       transition={{ duration: 0.5 }}
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.4 }}
     >
       {children}
-    </motion.span>
+    </motion.h3>
   );
 }
 
@@ -81,32 +82,10 @@ function MParagraphScroll({
       whileInView='visible'
       variants={variantDivText}
       transition={{ duration: 0.5 }}
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.4 }}
     >
       {children}
     </motion.p>
-  );
-}
-
-function MSubTitleScroll({
-  children,
-  custom,
-}: {
-  children: ReactNode;
-  custom: number;
-}) {
-  return (
-    <motion.span
-      custom={custom}
-      className={`info-subtitle ${cave.className}`}
-      initial='hidden'
-      whileInView='visible'
-      variants={variantDivText}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true, amount: 0.1 }}
-    >
-      {children}
-    </motion.span>
   );
 }
 
@@ -118,7 +97,7 @@ function MDivScrollContainer({ children }: { children: ReactNode }) {
       whileInView='visible'
       variants={variantDiv}
       transition={{ duration: 0.5 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.4 }}
     >
       {children}
     </motion.div>
@@ -140,7 +119,7 @@ function MGroupDiv({
       whileInView='visible'
       variants={variantDivText}
       transition={{ duration: 0.5 }}
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.4 }}
     >
       {children}
     </motion.div>
@@ -149,7 +128,6 @@ function MGroupDiv({
 
 export {
   MDivScrollContainer,
-  MTextScroll,
   MTitleScroll,
   MSubTitleScroll,
   MParagraphScroll,

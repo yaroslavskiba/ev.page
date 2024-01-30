@@ -71,7 +71,7 @@ function MDivImage({ children, custom }: ChildrenType) {
         initial='hidden'
         animate='visible'
         className='split'
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.4 }}
       >
         {children}
       </motion.div>
