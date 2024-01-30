@@ -64,14 +64,15 @@ export function Video({ src }: VideoType) {
         controls={false}
       >
         <source src={src} type='video/mp4' />
-        {/* <track src='/path/to/captions.vtt' label='English' /> */}
         Your browser does not support the video tag.
       </video>
       <div className={styles.buttons}>
         {!hasEnded && (
           <>
             {isPlaying ? (
-              <button className={styles.hidden} onClick={handlePause}></button>
+              <button className={styles.hidden} onClick={handlePause}>
+                {' '}
+              </button>
             ) : (
               <button className={styles.playerButton} onClick={handlePlay}>
                 <FaPlay />
