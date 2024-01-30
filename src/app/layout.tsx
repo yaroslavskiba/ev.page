@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     nosnippet: true,
     noimageindex: true,
   },
-  themeColor: '#fff',
+  themeColor: [{ media: '(prefers-color-scheme: light)', color: '#fff' }],
   generator: 'Художник',
   creator: 'yaroslavskiba',
 };
