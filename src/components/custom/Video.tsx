@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from 'react';
 import styles from './video.styles.module.css';
-import { FaPlay, FaPause, FaRedo } from 'react-icons/fa';
+import { FaPlay, FaRedo } from 'react-icons/fa';
 
 type VideoType = {
   src: string;

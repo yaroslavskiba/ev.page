@@ -4,7 +4,6 @@ import CustomSVGImage from '@/components/custom/bgImages/customBgImage';
 import CustomImage from '@/components/custom/contentStaticImage.tsx/Image.component';
 import SocialButtons from '@/components/header/SocialButtons';
 import {
-  MDivScrollContainer,
   MGroupDiv,
   MParagraphScroll,
   MSubTitleScroll,
@@ -21,20 +20,16 @@ function Page() {
         <div className='main-block'>
           <br />
           <div className='media'>
-            <MDivScrollContainer>
-              <Video src='/v_0.mp4' />
-            </MDivScrollContainer>
+            <Video src='/v_0.mp4' />
           </div>
           <div className='info bottom'>
             <>
-              <MDivScrollContainer>
-                <CustomSVGImage
-                  src='/svg/16.svg'
-                  width={150}
-                  height={100}
-                  styles={{ opacity: '.7' }}
-                />
-              </MDivScrollContainer>
+              <CustomSVGImage
+                src='/svg/16.svg'
+                width={150}
+                height={100}
+                styles={{ opacity: '.7' }}
+              />
               <MTitleScroll custom={1}>Ev cath</MTitleScroll>
               <MSubTitleScroll custom={2}>Екатерина Евсеенко</MSubTitleScroll>
               <MParagraphScroll custom={3}>
@@ -46,17 +41,15 @@ function Page() {
 
         <div className='main-block'>
           <div className='fullscreenInfo'>
-            <MDivScrollContainer>
-              <CustomSVGImage
-                src='/svg/9.svg'
-                width={250}
-                height={200}
-                styles={{
-                  opacity: '.7',
-                  transform: 'scaleX(-1)',
-                }}
-              />
-            </MDivScrollContainer>
+            <CustomSVGImage
+              src='/svg/9.svg'
+              width={250}
+              height={200}
+              styles={{
+                opacity: '.7',
+                transform: 'scaleX(-1)',
+              }}
+            />
             <MTitleScroll custom={1}>Художник / Декоратор</MTitleScroll>
             <MParagraphScroll custom={2}>
               Превращаю стены в произведения <b>искусства</b>. <br />
@@ -101,14 +94,12 @@ function Page() {
             </MGroupDiv>
             <br />
             <br />
-            <MDivScrollContainer>
-              <CustomSVGImage
-                src='/svg/10.svg'
-                width={150}
-                height={200}
-                styles={{ opacity: '.7', transform: 'rotate(90deg)' }}
-              />
-            </MDivScrollContainer>
+            <CustomSVGImage
+              src='/svg/10.svg'
+              width={150}
+              height={200}
+              styles={{ opacity: '.7', transform: 'rotate(90deg)' }}
+            />
           </div>
           <div className='media'>
             <MDivImage custom={1}>

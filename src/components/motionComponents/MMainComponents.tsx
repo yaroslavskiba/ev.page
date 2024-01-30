@@ -5,15 +5,6 @@ import { Caveat } from 'next/font/google';
 import { ReactNode } from 'react';
 const cave = Caveat({ subsets: ['cyrillic'] });
 
-const variantDiv = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-  },
-};
-
 const variantDivText = {
   hidden: {
     opacity: 0,
@@ -89,21 +80,6 @@ function MParagraphScroll({
   );
 }
 
-function MDivScrollContainer({ children }: { children: ReactNode }) {
-  return (
-    <motion.div
-      style={{ position: 'relative' }}
-      initial='hidden'
-      whileInView='visible'
-      variants={variantDiv}
-      transition={{ duration: 0.5 }}
-      viewport={{ once: true, amount: 0.4 }}
-    >
-      {children}
-    </motion.div>
-  );
-}
-
 function MGroupDiv({
   children,
   custom,
@@ -126,10 +102,4 @@ function MGroupDiv({
   );
 }
 
-export {
-  MDivScrollContainer,
-  MTitleScroll,
-  MSubTitleScroll,
-  MParagraphScroll,
-  MGroupDiv,
-};
+export { MTitleScroll, MSubTitleScroll, MParagraphScroll, MGroupDiv };
