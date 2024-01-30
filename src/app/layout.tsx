@@ -10,14 +10,12 @@ export const metadata: Metadata = {
   description:
     'Впустите в свою жизнь искусство выдающегося художника и мастера декора стен ev.cath. Откройте для себя впечатляющие работы и уникальные дизайны, которые преобразят ваш дом и добавят ему неповторимость.',
   keywords: ['ev.cath', 'художник', 'декоратор стен', 'искусство', 'картина'],
-  manifest: '/manifest.json',
   robots: {
     index: true,
     follow: true,
     noarchive: true,
     nosnippet: true,
     noimageindex: true,
-    nocache: true,
   },
   themeColor: '#fff',
   generator: 'Художник',
