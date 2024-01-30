@@ -59,10 +59,13 @@ function Page() {
             </MDivScrollContainer>
             <MTitleScroll custom={1}>Художник / Декоратор</MTitleScroll>
             <MParagraphScroll custom={2}>
-              Создаю картины по своему видению и смогу реализовать <b>Ваши </b>
+              Превращаю стены в произведения <b>искусства</b>. <br />
+              {'  '}Создаю картины по своему видению и смогу реализовать{' '}
+              <b>Ваши </b>
               идеи!
               <br />
-              Посмотреть работы:
+              <br />
+              <i>Посмотреть работы:</i>
               <br />
             </MParagraphScroll>
             <MGroupDiv custom={3}>
