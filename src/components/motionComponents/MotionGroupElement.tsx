@@ -82,7 +82,7 @@ function MDivImage({ children, custom }: ChildrenType) {
 function MHeader({ children, custom, center }: ChildrenType) {
   return (
     <>
-      <motion.h1
+      <motion.h2
         custom={custom}
         variants={variantContent}
         initial='hidden'
@@ -92,7 +92,7 @@ function MHeader({ children, custom, center }: ChildrenType) {
         viewport={{ once: true }}
       >
         {children}
-      </motion.h1>
+      </motion.h2>
     </>
   );
 }
