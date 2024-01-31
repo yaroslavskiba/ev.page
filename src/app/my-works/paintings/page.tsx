@@ -2,6 +2,7 @@ import { paintings } from '@/api/api';
 import NavHeader from '@/components/custom/NavHeader';
 import PaintingComponent from '@/components/paintings/Painting.component';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { cache } from 'react';
 
 export const metadata: Metadata = {
@@ -41,6 +42,7 @@ async function Page() {
             />
           );
         })}
+        <Link href='/my-works/walls'>Декор стен</Link>
       </div>
     </>
   );

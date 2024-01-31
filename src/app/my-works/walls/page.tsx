@@ -2,6 +2,7 @@ import { paintings } from '@/api/api';
 import NavHeader from '@/components/custom/NavHeader';
 import WallComponent from '@/components/walls/Wall.component';
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { cache } from 'react';
 
 export const metadata: Metadata = {
@@ -32,7 +33,6 @@ async function Page() {
       <div className='container'>
         <NavHeader text='Мои работы - Стены' />
 
-        {/* <MotionMainHeader>Стены</MotionMainHeader> */}
         {data.map(({ type, cost, url, id }) => {
           return (
             <WallComponent
@@ -44,6 +44,7 @@ async function Page() {
             />
           );
         })}
+        <Link href='/my-works/paintings'>Картины</Link>
       </div>
     </>
   );
