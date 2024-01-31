@@ -47,20 +47,25 @@ function Page() {
               height={200}
               styles={{
                 opacity: '.7',
-                transform: 'scaleX(-1)',
+                transform: 'rotate(-45deg)',
               }}
             />
             <MTitleScroll custom={1}>Художник / Декоратор</MTitleScroll>
-            <MParagraphScroll custom={2}>
-              Превращаю стены в произведения <b>искусства</b>. <br />
-              Пишу картины по <b>своему </b>видению, а так же с удовольствием
-              реализую <b>Ваши </b>идеи!
+            <div>
+              <MParagraphScroll custom={2}>
+                Превращаю стены в произведения <b>искусства</b>. <br />
+              </MParagraphScroll>
+              <MParagraphScroll custom={3}>
+                Пишу картины по <b>своему </b>видению, а так же с удовольствием
+                реализую <b>Ваши </b>идеи!
+              </MParagraphScroll>
               <br />
+              <MParagraphScroll custom={4}>
+                <i>Посмотреть работы:</i>
+              </MParagraphScroll>
               <br />
-              <i>Посмотреть работы:</i>
-              <br />
-            </MParagraphScroll>
-            <MGroupDiv custom={3}>
+            </div>
+            <MGroupDiv custom={5}>
               <Link href='/my-works/paintings'>
                 <i>Картины</i>
               </Link>
@@ -84,7 +89,7 @@ function Page() {
               <SocialButtons />
             </MGroupDiv>
             <br />
-            <MGroupDiv custom={3}>
+            <MGroupDiv custom={4}>
               <Link href='/contact'>
                 <i>Связаться со мной</i>
               </Link>

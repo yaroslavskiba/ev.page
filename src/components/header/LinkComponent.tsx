@@ -40,7 +40,9 @@ function LinkComponent({
         }
         onClick={() => handleLink(path)}
       >
-        <span className={exo.className}>{name}</span>
+        <span className={exo.className}>
+          <i>{name}</i>
+        </span>
       </button>
     </>
   );

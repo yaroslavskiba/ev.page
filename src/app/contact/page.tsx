@@ -8,6 +8,9 @@ import {
 import SocialPersonalButtons from '@/components/custom/customComponents/SocialPersonal';
 import NavHeader from '@/components/custom/NavHeader';
 import { Metadata } from 'next';
+import { Caveat } from 'next/font/google';
+
+const cave = Caveat({ subsets: ['cyrillic'] });
 
 export const metadata: Metadata = {
   title: 'ev.cath - Контакты',
@@ -31,7 +34,11 @@ function Page() {
           <CustomImage url='/staticImages/form.webp' alt='form image' />
         </MDivImage>
         <div className='split'>
-          <MHeader custom={2}>Связаться со мной</MHeader>
+          <MHeader custom={2}>
+            <span className={cave.className} style={{ fontSize: '36px' }}>
+              Связаться со мной
+            </span>
+          </MHeader>
           <MParagraph custom={3}>
             Для связи со мной вы можете использовать эту форму, либо{' '}
             <a

@@ -10,7 +10,7 @@ import {
 import { ContactData } from '../custom/contactForm/ContactForm';
 import { Exo_2 } from 'next/font/google';
 
-const exo = Exo_2({ subsets: ['cyrillic'] });
+const exo = Exo_2({ subsets: ['latin'] });
 
 type ChildrenType = {
   children: ReactNode;
@@ -160,10 +160,12 @@ function MButton({ nameButton }: ButtonType) {
         initial='hidden'
         animate='visible'
         viewport={{ once: true }}
-        className={`link-button ${exo.className}`}
+        className='link-button'
         type='submit'
       >
-        {nameButton}
+        <span className={exo.className}>
+          <i>{nameButton}</i>
+        </span>
       </motion.button>
     </>
   );
@@ -201,23 +203,6 @@ function MLink({
   );
 }
 
-function MDivNav({ children, custom }: ChildrenType) {
-  return (
-    <>
-      <motion.div
-        custom={custom}
-        variants={variantContent}
-        initial='hidden'
-        animate='visible'
-        className='gallery-nav-item'
-        viewport={{ once: true }}
-      >
-        {children}
-      </motion.div>
-    </>
-  );
-}
-
 export {
   MParagraph,
   MDiv,
@@ -227,5 +212,4 @@ export {
   MTextArea,
   MButton,
   MLink,
-  MDivNav,
 };

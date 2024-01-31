@@ -44,6 +44,7 @@
   opacity: 0.7;
   font-family: Tektur;
   cursor: pointer;
+  font-style: normal;
 }
 .navigationItem:before {
   content: '';
@@ -77,9 +78,6 @@
     rgba(255, 255, 255, 1) 0%,
     rgba(105, 105, 105, 1) 100%
   );
-}
-.navigationItem > span {
-  font-style: italic;
 }
 
 .menuWidth {
