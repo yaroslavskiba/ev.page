@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
-import { Exo_2 } from 'next/font/google';
+import { Caveat, Exo_2 } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/header/Navigation';
 
-const exo = Exo_2({ subsets: ['cyrillic'] });
+export const exo = Exo_2({ subsets: ['cyrillic'] });
+export const cave = Caveat({ subsets: ['cyrillic'] });
 
 export const metadata: Metadata = {
   title: 'ev.cath - Художник и Декоратор стен',

@@ -8,9 +8,7 @@ import {
   variantContentTop,
 } from './variants';
 import { ContactData } from '../custom/contactForm/ContactForm';
-import { Exo_2 } from 'next/font/google';
-
-const exo = Exo_2({ subsets: ['latin'] });
+import { exo } from '@/app/layout';
 
 type ChildrenType = {
   children: ReactNode;

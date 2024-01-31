@@ -1,9 +1,8 @@
 'use client';
 
+import { cave } from '@/app/layout';
 import { motion } from 'framer-motion';
-import { Caveat } from 'next/font/google';
 import { ReactNode } from 'react';
-const cave = Caveat({ subsets: ['cyrillic'] });
 
 const variantDivText = {
   hidden: {

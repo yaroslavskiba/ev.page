@@ -6,9 +6,7 @@ import LinkComponent from './LinkComponent';
 import styles from './header.styles.module.css';
 import SocialButtons from './SocialButtons';
 import { useEffect, useState } from 'react';
-import { Caveat } from 'next/font/google';
-
-const cave = Caveat({ subsets: ['cyrillic'] });
+import { cave } from '@/app/layout';
 
 type NavType = {
   name: string;

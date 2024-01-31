@@ -8,9 +8,7 @@ import {
 import SocialPersonalButtons from '@/components/custom/customComponents/SocialPersonal';
 import NavHeader from '@/components/custom/NavHeader';
 import { Metadata } from 'next';
-import { Caveat } from 'next/font/google';
-
-const cave = Caveat({ subsets: ['cyrillic'] });
+import { cave } from '../layout';
 
 export const metadata: Metadata = {
   title: 'ev.cath - Контакты',
