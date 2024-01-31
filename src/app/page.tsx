@@ -66,10 +66,10 @@ function Page() {
               <br />
             </div>
             <MGroupDiv custom={5}>
-              <Link href='/my-works/paintings'>
+              <Link as='paintings' href='/my-works/paintings'>
                 <i>Картины</i>
               </Link>
-              <Link href='/my-works/walls'>
+              <Link as='walls' href='/my-works/walls'>
                 <i>Декор стен</i>
               </Link>
             </MGroupDiv>
@@ -90,7 +90,7 @@ function Page() {
             </MGroupDiv>
             <br />
             <MGroupDiv custom={4}>
-              <Link href='/contact'>
+              <Link as='contact' href='/contact'>
                 <i>Связаться со мной</i>
               </Link>
               <a href='https://t.me/Ev_Cath_helper_bot' target='blank'>

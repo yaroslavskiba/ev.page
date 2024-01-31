@@ -45,6 +45,7 @@ function Navigation() {
       >
         <div className={styles.logoGroup}>
           <Link
+            as='headLink'
             href='/'
             className={`${styles.logoTitle} ${cave.className}`}
             onClick={toggleMenu}

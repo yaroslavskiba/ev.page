@@ -27,6 +27,7 @@ function WallComponent({ url, id, type, cost }: Walls) {
               </p>
               <br />
               <Link
+                as='wall'
                 href={`/my-works/walls/${id}`}
                 className={styles.textLinkImage}
                 style={{ padding: '10px 15px', color: '#fff' }}
