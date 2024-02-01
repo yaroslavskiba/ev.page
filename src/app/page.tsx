@@ -10,11 +10,7 @@ import {
   MTitleScroll,
 } from '@/components/motionComponents/MMainComponents';
 import { MDivImage } from '@/components/motionComponents/MotionGroupElement';
-import { Exo_2, Caveat } from 'next/font/google';
 import Link from 'next/link';
-
-export const exo = Exo_2({ subsets: ['cyrillic'] });
-export const cave = Caveat({ subsets: ['cyrillic'] });
 
 function Page() {
   return (

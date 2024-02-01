@@ -1,15 +1,12 @@
 'use client';
 
-import {
-  ChangeEvent,
-  Dispatch,
-  ReactNode,
-  SetStateAction,
-} from 'react';
+import { ChangeEvent, Dispatch, ReactNode, SetStateAction } from 'react';
 import { motion } from 'framer-motion';
 import { variantContent, variantContentTop, variantDiv } from './variants';
 import { ContactData } from '../custom/contactForm/ContactForm';
-import { exo } from '@/app/page';
+import { Exo_2 } from 'next/font/google';
+
+const exo = Exo_2({ subsets: ['cyrillic'] });
 
 type ChildrenType = {
   children: ReactNode;

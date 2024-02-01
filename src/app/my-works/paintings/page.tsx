@@ -42,7 +42,7 @@ async function Page() {
             />
           );
         })}
-        <Link as='walls' href='/my-works/walls'>
+        <Link as='/my-works/walls' href='/my-works/walls'>
           Декор стен
         </Link>
       </div>

@@ -44,7 +44,7 @@ async function Page() {
             />
           );
         })}
-        <Link as='paintings' href='/my-works/paintings'>
+        <Link as='/my-works/paintings' href='/my-works/paintings'>
           Картины
         </Link>
       </div>
