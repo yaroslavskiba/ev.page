@@ -1,6 +1,6 @@
 'use client';
 
-import { cave } from '@/app/layout';
+import { cave } from '@/app/page';
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 

@@ -8,7 +8,7 @@ import {
 import SocialPersonalButtons from '@/components/custom/customComponents/SocialPersonal';
 import NavHeader from '@/components/custom/NavHeader';
 import { Metadata } from 'next';
-import { cave } from '../layout';
+import { cave } from '../page';
 
 export const metadata: Metadata = {
   title: 'ev.cath - Контакты',

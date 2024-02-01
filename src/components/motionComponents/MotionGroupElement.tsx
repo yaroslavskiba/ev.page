@@ -5,12 +5,11 @@ import {
   Dispatch,
   ReactNode,
   SetStateAction,
-  useState,
 } from 'react';
 import { motion } from 'framer-motion';
 import { variantContent, variantContentTop, variantDiv } from './variants';
 import { ContactData } from '../custom/contactForm/ContactForm';
-import { exo } from '@/app/layout';
+import { exo } from '@/app/page';
 
 type ChildrenType = {
   children: ReactNode;

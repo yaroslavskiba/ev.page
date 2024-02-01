@@ -6,7 +6,7 @@ import LinkComponent from './LinkComponent';
 import styles from './header.styles.module.css';
 import SocialButtons from './SocialButtons';
 import { useEffect, useState } from 'react';
-import { cave } from '@/app/layout';
+import { cave } from '@/app/page';
 
 type NavType = {
   name: string;
