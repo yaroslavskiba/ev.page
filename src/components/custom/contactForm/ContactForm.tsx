@@ -6,7 +6,6 @@ import {
   MInput,
   MTextArea,
 } from '@/components/motionComponents/MotionGroupElement';
-// import ReCAPTCHA from 'react-google-recaptcha';
 
 export type ContactData = {
   name: string;
@@ -34,12 +33,19 @@ function ContactForm() {
     email: '',
     question: '',
   });
-  // const [isCaptchaSuccessful, setIsCaptchaSuccess] = useState<boolean>(false);
-  // const RECAPTCHA_KEY = process.env.REACT_APP_SECRET_KEY;
-  // console.log(RECAPTCHA_KEY);
+  const [loadingState, setLoadingState] = useState<boolean>(false);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (contactData.name && contactData.email && contactData.question) {
+      setLoadingState(true);
+
+      setTimeout(() => {
+        setContactData({ name: '', email: '', question: '' });
+        setLoadingState(false);
+      }, 1500);
+    }
 
     try {
       const response = await fetch('/contact/api', {
@@ -83,11 +89,7 @@ function ContactForm() {
           custom={Number(textAreaData.custom)}
           id={textAreaData.id}
         />
-        {/* <ReCAPTCHA
-          sitekey={process.env.REACT_APP_SECRET_KEY}
-          onChange={() => setIsCaptchaSuccess(true)}
-        /> */}
-        <MButton nameButton={'Отправить'} />
+        <MButton nameButton={!loadingState ? 'Отправить' : 'Отправка...'} />
       </form>
     </div>
   );

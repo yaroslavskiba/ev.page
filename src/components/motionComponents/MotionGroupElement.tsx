@@ -1,12 +1,14 @@
 'use client';
 
-import { ChangeEvent, Dispatch, ReactNode, SetStateAction } from 'react';
-import { motion } from 'framer-motion';
 import {
-  variantContent,
-  variantContentBottom,
-  variantContentTop,
-} from './variants';
+  ChangeEvent,
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+  useState,
+} from 'react';
+import { motion } from 'framer-motion';
+import { variantContent, variantContentTop, variantDiv } from './variants';
 import { ContactData } from '../custom/contactForm/ContactForm';
 import { exo } from '@/app/layout';
 
@@ -24,9 +26,9 @@ interface InputType {
   id: string;
 }
 
-export type ButtonType = {
+export interface ButtonType {
   nameButton?: string;
-};
+}
 
 function MParagraph({ children, custom }: ChildrenType) {
   return (
@@ -112,6 +114,7 @@ function MInput({ fc, value, custom, placeholder, id }: InputType) {
         variants={variantContent}
         initial='hidden'
         animate='visible'
+        required
         viewport={{ once: true }}
         value={value}
         placeholder={placeholder}
@@ -138,6 +141,7 @@ function MTextArea({ fc, value, custom, placeholder, id }: InputType) {
         custom={custom}
         variants={variantContent}
         initial='hidden'
+        required
         animate='visible'
         viewport={{ once: true }}
         value={value}
@@ -153,8 +157,7 @@ function MButton({ nameButton }: ButtonType) {
   return (
     <>
       <motion.button
-        custom={8}
-        variants={variantContentBottom}
+        variants={variantDiv}
         initial='hidden'
         animate='visible'
         viewport={{ once: true }}
