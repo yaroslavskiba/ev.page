@@ -27,7 +27,7 @@ export type Walls = {
 
 type SendMailType = {
   name: string;
-  email: string;
+  phoneNumber: string;
   question: string;
 };
 
@@ -85,7 +85,7 @@ class Paintings implements UnionInterface {
     return { id, type, cost, url };
   };
 
-  sendMail = async ({ name, email, question }: SendMailType) => {
+  sendMail = async ({ name, phoneNumber, question }: SendMailType) => {
     try {
       const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -98,9 +98,9 @@ class Paintings implements UnionInterface {
       let mailOptions = {
         from: `${process.env.EMAIL_TO_SEND}`,
         to: `${process.env.EMAIL_TO_GET}`,
-        subject: `Вопрос с сайта от ${name} номер телефона ${email}`,
+        subject: `Вопрос с сайта от ${name} номер телефона ${phoneNumber}`,
         text: `Имя пользователя: ${name}
-Номер телефона: ${email}
+Номер телефона: ${phoneNumber}
 Вопрос: ${question}`,
       };
 

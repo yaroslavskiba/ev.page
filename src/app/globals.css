@@ -80,17 +80,20 @@ ul li {
 /*  ----- иконки в навигации ----- */
 
 .icons {
-  font-size: 20px;
+  font-size: 24px;
   background: inherit;
   padding: 5px;
   cursor: pointer;
-  color: #696969;
+  color: #000;
+  opacity: 0.7;
 }
 .icons:hover {
+  opacity: 1;
   transform: scale(1.2);
   transition: 0.3s ease;
 }
 .icons:not(:hover) {
+  opacity: 0.7;
   transform: scale(1);
   transition: 0.3s ease;
 }
@@ -200,26 +203,6 @@ ul li {
 }
 .link-button span {
   opacity: 0.7;
-}
-.link-button:before {
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 0;
-  bottom: -5px;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(105, 105, 105, 1) 100%
-  );
-  transition: width 0.3s ease;
-}
-.link-button:hover:before {
-  width: calc(100% + 5px);
-}
-.link-button:not(:hover):before {
-  right: 0;
-  width: 0;
 }
 
 /* ----- Информационный блок ----- */

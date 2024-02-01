@@ -74,8 +74,9 @@ function Navigation() {
             })}
           </ul>
         </nav>
-        <SocialButtons />
         <div className={styles.bottomInfo}>
+          <SocialButtons />
+
           <p>Екатерина Евсеенко</p>
           <p>Made by Yaroslavskiba</p>
         </div>
