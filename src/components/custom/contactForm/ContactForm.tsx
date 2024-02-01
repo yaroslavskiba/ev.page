@@ -9,7 +9,7 @@ import {
 
 export type ContactData = {
   name: string;
-  email: string;
+  phoneNumber: string;
   question: string;
   [key: string]: string;
 };
@@ -22,7 +22,7 @@ type DataType = {
 
 const data: DataType[] = [
   { name: 'Полное имя', id: 'name', custom: '5' },
-  { name: 'Номер телефона', id: 'email', custom: '6' },
+  { name: 'Номер телефона', id: 'phoneNumber', custom: '6' },
 ];
 
 const textAreaData: DataType = { name: 'Вопрос', id: 'question', custom: '7' };
@@ -30,7 +30,7 @@ const textAreaData: DataType = { name: 'Вопрос', id: 'question', custom: '
 function ContactForm() {
   const [contactData, setContactData] = useState<ContactData>({
     name: '',
-    email: '',
+    phoneNumber: '',
     question: '',
   });
   const [loadingState, setLoadingState] = useState<boolean>(false);
@@ -38,11 +38,11 @@ function ContactForm() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (contactData.name && contactData.email && contactData.question) {
+    if (contactData.name && contactData.phoneNumber && contactData.question) {
       setLoadingState(true);
 
       setTimeout(() => {
-        setContactData({ name: '', email: '', question: '' });
+        setContactData({ name: '', phoneNumber: '', question: '' });
         setLoadingState(false);
       }, 1500);
     }

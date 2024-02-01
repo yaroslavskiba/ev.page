@@ -98,9 +98,9 @@ class Paintings implements UnionInterface {
       let mailOptions = {
         from: `${process.env.EMAIL_TO_SEND}`,
         to: `${process.env.EMAIL_TO_GET}`,
-        subject: `Вопрос с сайта от ${name} почта ${email}`,
+        subject: `Вопрос с сайта от ${name} номер телефона ${email}`,
         text: `Имя пользователя: ${name}
-Почта: ${email}
+Номер телефона: ${email}
 Вопрос: ${question}`,
       };
 
